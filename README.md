@@ -1,124 +1,49 @@
-# BeepWeep Ventures
+# BeepWeep
 
-> **"A haven for the 10x builders, the thinkers, the quiet architects of wealth."**
+Parent-company site for **ClusterBid, Neev, Curat, and VeriCite**.
 
-Welcome to the digital home of **BeepWeep Ventures**. We are a venture capital firm that attracts those who solve problems with precision, not ego. We chase outcomes, not optics. Here, status takes a back seat to substance.
+Live: [beepweep.com](https://beepweep.com)
 
-## 🌍 Investment Ecosystems
+Tagline: **Built with purpose. For what comes next.**
 
-We have forged ventures and compounded wealth across diverse arenas:
+## Product fleet
 
-*   **🖥️ Infra + AI (2025 Onwards)**: Building the foundational systems that power tomorrow.
-*   **🌐 Blockchain (2020 Onwards)**: Building the decentralized future.
-*   **📈 Fund Manager (2018)**: Strategies for 10x returns.
-*   **💳 Payments (2017)**: Making transactions seamless.
-*   **📊 Ad Tech (2017)**: Decoding the illusion of attention.
-*   **✈️ Travel (2016)**: Eliminating the convenience fee.
-*   **🗞️ News Media (2015)**: Influencing the target audience.
+Canonical order used everywhere (hero cards, tabs, login dropdown, footer):
 
-## 👥 The Architects
+1. **ClusterBid** — AI and GPU infrastructure. Region-pinned inference cloud. [clusterbid.com](https://clusterbid.com)
+2. **Neev** — MSME supply-chain operations. WhatsApp orders, ledgers, GST. [app.onneev.com](https://app.onneev.com)
+3. **Curat** — Loyalty layer for crypto cards, plus card discovery. [curat.money](https://curat.money)
+4. **VeriCite** — Institutional knowledge retrieval (multi-tenant RAG). [console.vericite.ai](https://console.vericite.ai)
 
-**Madhur Satija** - CEO (Chief Execution Officer)
-*Full stack operator and generalist. A builder who turned curiosity into ventures across blockchain, fintech, and beyond. He architects systems that compound. From news media to Web3, his path has been deliberate: solve real problems, build with precision, scale with purpose. No fluff. Just execution.*
+## Design
 
-**Abhishek Kaushik** - CTO (Chief Troubleshooting Officer)
-*Technical leader ensuring systems run smoothly and problems get solved.*
+Harvey-inspired editorial system. Neutral tokens only:
 
-## 🎨 Design Philosophy: Neo-Brutalism
+| Token | Hex |
+| --- | --- |
+| Ivory canvas | `#fafaf9` |
+| Ink | `#0f0e0d` |
+| Pale gray | `#f2f1f0` |
+| Hairline | `#e5e5e3` |
+| Border | `#cccac6` |
+| Muted | `#706d66` |
+| Hover | `#33312c` |
 
-This website embodies our core philosophy: **Substance over Status**.
+Typography is self-hosted in `assets/fonts/` (`HarveySerifFont`, `HarveySansFont`). Do not hotlink Harvey CDN.
 
-We chose a **Neo-Brutalist** aesthetic to reflect this: raw, unpolished, and unapologetically bold.
-*   **High Contrast**: Stark black and white with "International Orange" (#ff4d00) and "Hyper Blue" (#0055ff) accents.
-*   **Typography**: Massive, uppercase `Space Grotesk` headings that demand attention.
-*   **UI Elements**: Thick 3px borders, hard offset shadows, and tactile interactions.
-*   **Texture**: A subtle dot grid background representing the technical precision of our work.
-*   **Dark Mode**: Fully functional light/dark theme toggle with system preference detection.
+Brand name is **BeepWeep** only. No “Ventures” in logo, header, footer, or copyright.
 
-## ✨ Key Features
+## Pages
 
-### Theme System
-- **Auto-Detection**: Automatically adapts to your system's light/dark preference
-- **Manual Toggle**: Switch between themes with the toggle button in the header
-- **Smooth Transitions**: All color changes animate smoothly for a polished experience
-- **Persistence**: Your preference is saved in localStorage
+- `index.html` — home
+- `contact.html` — Book a Call
+- `privacy.html` — legal body is byte-preserved from the original policy
 
-### Interactive Elements
-- **Cookie Banner**: Auto-dismissing privacy notice with countdown
-- **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices
-- **Social Links**: Connect with the team on LinkedIn and X (Twitter)
-- **Animated Partners**: Marquee showcasing trusted companies
+## Local preview
 
-### Technical Highlights
-- **Dynamic Copyright**: Year automatically updates without manual maintenance
-- **Semantic HTML**: Proper structure with accessibility in mind
-- **SEO Optimized**: Meta tags, Open Graph, and JSON-LD structured data
-- **Performance**: Pure CSS and vanilla JavaScript, no framework bloat
-
-## 🛠️ Tech Stack
-
-*   **HTML5**: Semantic, accessible markup with proper ARIA labels
-*   **CSS3**: Pure, raw CSS with custom properties, transitions, and animations. No frameworks.
-*   **JavaScript**: Minimal vanilla JS for theme toggle, cookie banner, and dynamic year
-*   **GitHub Pages**: Static site hosting with automatic deployment
-
-## 📁 Project Structure
-
-```
-beepweep.github.io/
-├── assets/
-│   ├── css/
-│   │   └── styles.css          # All styling with Neo-Brutalist design
-│   ├── js/
-│   │   └── main.js             # Cookie banner, theme toggle, year updater
-│   └── images/
-│       └── madhur.jpg          # Founder photo
-├── docs/
-│   ├── CHANGELOG.md            # Version history and updates
-│   └── FEATURES.md             # Detailed feature documentation
-├── index.html                  # Main landing page
-├── .gitignore                  # Git ignore rules
-└── README.md                   # This file
+```bash
+python3 -m http.server 4173 --bind 127.0.0.1
+# Open http://127.0.0.1:4173
 ```
 
-## 🚀 Local Development
-
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/beepweep/beepweep.github.io.git
-    ```
-2.  Navigate to the directory:
-    ```bash
-    cd beepweep.github.io
-    ```
-3.  Open `index.html` in your browser or use a local server:
-    ```bash
-    python -m http.server 8000
-    # or
-    npx serve
-    ```
-
-## 🔄 Recent Updates
-
-- Updated Ecosystems bento grid layout to be chronological and perfectly balanced
-- Dark mode implementation with smooth transitions
-- Founder section with team member cards
-- Dynamic copyright year
-- Mobile responsive improvements
-- Cookie banner with auto-dismiss
-- Partners marquee section
-- Social media integration
-
-## 🤝 Contributing
-
-This is a private repository for BeepWeep Ventures. For inquiries, please contact us through our website.
-
-## 📞 Contact
-
-- **Website**: [beepweep.com](https://beepweep.com)
-- **LinkedIn**: [BeepWeep Ventures](https://www.linkedin.com/company/beepweep/)
-- **GitHub**: [@beepweep](https://github.com/beepweep)
-
-## 📄 License
-
-© 2015 to Present | BeepWeep Ventures. All rights reserved.
+© 2015–present BeepWeep. All rights reserved.

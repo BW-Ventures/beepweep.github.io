@@ -1,10 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
-  <!-- Orange background parallelogram -->
-  <polygon points="100,50 380,50 320,150 40,150" fill="#ff4d00"/>
-  
-  <!-- Black parallelogram -->
-  <polygon points="110,60 370,60 310,140 50,140" fill="#000000"/>
-  
-  <!-- BEEPWEEP text -->
-  <text x="200" y="115" font-family="Space Grotesk, Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#ffffff" letter-spacing="2">BEEPWEEP</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" width="120" height="40">
+  <text x="0" y="29" font-family="'HarveySerifFont', Georgia, serif" font-size="28" font-weight="400" letter-spacing="-0.8" fill="#0f0e0d">BeepWeep</text>
 </svg>

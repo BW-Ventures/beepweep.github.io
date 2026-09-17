@@ -4,377 +4,915 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BeepWeep Ventures</title>
-  <meta name="description" content="A haven for the 10x builders, the thinkers, the quiet architects of wealth." />
-  <meta name="keywords"
-    content="venture capital, blockchain, AI, fintech, healthtech, edtech, startup funding, 10x builders, BeepWeep Ventures" />
-  <meta name="author" content="BeepWeep Ventures" />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://beepweep.github.io/" />
-  <meta property="og:title" content="BeepWeep Ventures" />
+  <title>BeepWeep · Built with Purpose. For what comes next.</title>
+  <meta name="description"
+    content="BeepWeep is the parent company of ClusterBid, Neev, Curat, and VeriCite. Building frontier infrastructure and operational software since 2015." />
+  <meta name="author" content="BeepWeep" />
+  <link rel="canonical" href="https://beepweep.com/" />
+  <meta property="og:title" content="BeepWeep · Built with Purpose. For what comes next." />
   <meta property="og:description"
-    content="A haven for the 10x builders, the thinkers, the quiet architects of wealth." />
+    content="A family of frontier products across AI infrastructure, digital asset intelligence, institutional knowledge, and operational commerce." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://beepweep.github.io" />
-  <meta property="og:image" content="https://beepweep.github.io/assets/og-image.png" />
+  <meta property="og:url" content="https://beepweep.com/" />
+  <meta property="og:image" content="https://beepweep.com/assets/images/social-card.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="BeepWeep Ventures" />
+  <meta name="twitter:title" content="BeepWeep · Built with Purpose. For what comes next." />
   <meta name="twitter:description"
     content="A haven for the 10x builders, the thinkers, the quiet architects of wealth." />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBHSMCVXKS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-MBHSMCVXKS');
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap"
-    rel="stylesheet" />
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23ffffff' width='32' height='32'/%3E%3Ctext x='16' y='21' font-family='Inter,%20sans-serif' font-size='14' font-weight='700' text-anchor='middle' fill='%23111111'%3EBW%3C/text%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/beepweep-logo.svg" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=6" />
+  <script src="assets/js/main.js" defer></script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Announcement Bar (Harvey Style) -->
+  <aside class="announcement-banner" id="announcement-banner" aria-label="Announcement">
+    <span class="announcement-pill">2026 Fleet</span>
+    <span>Operating at frontier scale across ClusterBid, Neev, Curat &amp; VeriCite.</span>
+    <a href="#fleet">Explore our products <span aria-hidden="true">→</span></a>
+    <button class="announcement-close" id="announcement-close" aria-label="Dismiss announcement" type="button">×</button>
+  </aside>
+
+  <!-- Site Header -->
   <header class="site-header">
     <div class="container header-shell">
-      <a class="brand-mark" href="/">
-        <span class="brand-mark__word">BeepWeep</span>
+      <a class="brand" href="index.html" aria-label="BeepWeep home">
+        <span>BeepWeep</span>
       </a>
-      <span class="header-greeting">
-        <span class="greet" data-label="Hello in English">hello</span>
-        <span class="greet" data-label="Hello in Hindi">नमस्ते</span>
-        <span class="greet" data-label="Hello in Japanese">こんにちは</span>
-        <span class="greet" data-label="Hello in Chinese">你好</span>
-      </span>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#platform">Platform</a>
+        <a href="#fleet">Our Fleet</a>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#journey">Journey</a>
+        <a href="#team">Leadership</a>
+        <a href="#coordinates">Coordinates</a>
+      </nav>
+
       <div class="header-actions">
-        <a href="https://dash.beepweep.com" class="header-login" target="_blank" rel="noopener">Login</a>
-        <button class="theme-toggle" aria-label="Toggle theme">
-          <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2">
-            <circle cx="12" cy="12" r="5"></circle>
-            <path
-              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
-            </path>
-          </svg>
-          <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" style="display: none;">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
+        <div class="login-dropdown-wrapper">
+          <button class="login-btn" type="button" aria-expanded="false" aria-controls="login-dropdown-menu" id="login-dropdown-btn">
+            <span>Login</span>
+            <svg class="login-chevron" width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M5.5 7.5L10 12L14.5 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="login-dropdown-menu" id="login-dropdown-menu" role="menu" hidden>
+            <a role="menuitem" class="dropdown-item" href="https://dash.beepweep.com" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;">
+              <span class="dropdown-item-inner" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;">
+                <img src="assets/images/product-logos/icon-team.svg" alt="" class="dropdown-icon" width="20" height="20" aria-hidden="true" style="width:20px;height:20px;flex-shrink:0;object-fit:contain;" />
+                <span>Team Login</span>
+              </span>
+              <span class="dropdown-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a role="menuitem" class="dropdown-item" href="https://clusterbid.com/login" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;">
+              <span class="dropdown-item-inner" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;">
+                <img src="assets/images/product-logos/icon-clusterbid.svg" alt="" class="dropdown-icon" width="20" height="20" aria-hidden="true" style="width:20px;height:20px;flex-shrink:0;object-fit:contain;" />
+                <span>ClusterBid</span>
+              </span>
+              <span class="dropdown-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a role="menuitem" class="dropdown-item" href="https://app.onneev.com/login" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;">
+              <span class="dropdown-item-inner" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;">
+                <img src="assets/images/product-logos/icon-neev.svg" alt="" class="dropdown-icon" width="20" height="20" aria-hidden="true" style="width:20px;height:20px;flex-shrink:0;object-fit:contain;" />
+                <span>Neev</span>
+              </span>
+              <span class="dropdown-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a role="menuitem" class="dropdown-item" href="https://curat.money/auth-user/login" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;">
+              <span class="dropdown-item-inner" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;">
+                <img src="assets/images/product-logos/icon-curat.png" alt="" class="dropdown-icon" width="20" height="20" aria-hidden="true" style="width:20px;height:20px;flex-shrink:0;object-fit:contain;" />
+                <span>Curat</span>
+              </span>
+              <span class="dropdown-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a role="menuitem" class="dropdown-item" href="https://console.vericite.ai/login" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;">
+              <span class="dropdown-item-inner" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;">
+                <img src="assets/images/product-logos/icon-vericite.svg" alt="" class="dropdown-icon" width="20" height="20" aria-hidden="true" style="width:20px;height:20px;flex-shrink:0;object-fit:contain;" />
+                <span>VeriCite</span>
+              </span>
+              <span class="dropdown-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+        <a class="button button-small" href="contact.html">Book a Call</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
+          aria-label="Open navigation">
+          <span></span>
+          <span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero" id="top">
-      <div class="container hero-content">
-        <div class="hero-copy">
-          <h1>
-            A haven for the <span>10x builders</span>, the thinkers, the quiet architects of wealth.
-          </h1>
-          <p class="bio">
-            At BeepWeep Ventures, we attract those who solve problems with precision, not ego. Who chase outcomes, not
-            optics.
-            This is where status takes a back seat to substance. Where clarity leads, and wealth follows.
+  <main id="main" tabindex="-1">
+    <!-- Hero Section -->
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <h1 class="hero-title" id="hero-title">
+          Built with purpose.<br>For what comes <em>next.</em>
+        </h1>
+
+        <div class="hero-description">
+          <p class="hero-lead">
+            We build and nurture businesses that make complex things work better.
           </p>
-          <div class="hero-actions">
-            <a class="hero-button" href="https://wellfound.com/company/beepweep" target="_blank"
-              rel="noopener"><span>Careers</span></a>
-            <a class="hero-button hero-button--outline" href="contact.html"><span>Get in Touch</span></a>
+          <p class="hero-subtext">
+            BeepWeep is the home of independent products across AI, finance, knowledge, and everyday business. We attract those who solve problems with precision, not ego. Where status takes a back seat to substance, and value compounds.
+          </p>
+
+          <div class="hero-ctas">
+            <a class="button" href="#fleet">Explore our products <span aria-hidden="true">→</span></a>
+            <a class="button button-outline" href="contact.html">Schedule a Briefing</a>
           </div>
+        </div>
+      </div>
+
+      <div class="hero-status-strip">
+        <span>Established 2015</span>
+        <a href="#platform">The BeepWeep Operating Thesis <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <!-- Hero Platform Showcase / Command View (Harvey Style) -->
+      <div class="hero-showcase" role="region" aria-label="BeepWeep Active Fleet Command View">
+        <figure class="hero-media-preview">
+          <picture>
+            <source srcset="assets/images/hero-art.webp?v=4" type="image/webp" />
+            <img src="assets/images/hero-art.jpeg?v=4" alt="BeepWeep architectural foundations and systems artwork" width="2944" height="865" fetchpriority="high" />
+          </picture>
+        </figure>
+
+        <div class="showcase-grid">
+          <!-- 1. ClusterBid Card -->
+          <article class="showcase-card">
+            <div class="showcase-card-top">
+              <a href="#clusterbid" class="showcase-card-logo-link" aria-label="Inspect ClusterBid">
+                <img src="assets/images/product-logos/icon-clusterbid.svg" alt="" class="showcase-card-logo" width="28" height="28" aria-hidden="true" />
+              </a>
+              <a class="showcase-card-status" href="https://clusterbid.com" target="_blank" rel="noopener">clusterbid.com <span class="badge-arrow" aria-hidden="true">↗</span></a>
+            </div>
+            <div>
+              <p class="showcase-card-category">AI &amp; GPU Infrastructure</p>
+              <h2 class="showcase-card-title"><a href="#clusterbid" class="showcase-card-title-link">ClusterBid</a></h2>
+              <p class="showcase-card-desc">Region-pinned inference cloud connecting low-latency gateways, usage metering, and automated billing reconciliation.</p>
+            </div>
+            <a class="showcase-card-link" href="#clusterbid">Inspect ClusterBid <span aria-hidden="true">↓</span></a>
+          </article>
+
+          <!-- 2. Neev Card -->
+          <article class="showcase-card">
+            <div class="showcase-card-top">
+              <a href="#neev" class="showcase-card-logo-link" aria-label="Inspect Neev">
+                <img src="assets/images/product-logos/icon-neev.svg" alt="" class="showcase-card-logo" width="28" height="28" aria-hidden="true" />
+              </a>
+              <a class="showcase-card-status" href="https://app.onneev.com" target="_blank" rel="noopener">onneev.com <span class="badge-arrow" aria-hidden="true">↗</span></a>
+            </div>
+            <div>
+              <p class="showcase-card-category">MSME Supply Chain Operations</p>
+              <h2 class="showcase-card-title"><a href="#neev" class="showcase-card-title-link">Neev</a></h2>
+              <p class="showcase-card-desc">Modular operations platform for traditional MSMEs, starting with textile supply chains. Unifying WhatsApp orders, ledgers, and GST.</p>
+            </div>
+            <a class="showcase-card-link" href="#neev">Inspect Neev <span aria-hidden="true">↓</span></a>
+          </article>
+
+          <!-- 3. Curat Card -->
+          <article class="showcase-card">
+            <div class="showcase-card-top">
+              <a href="#curat" class="showcase-card-logo-link" aria-label="Inspect Curat">
+                <img src="assets/images/product-logos/icon-curat.png" alt="" class="showcase-card-logo" width="28" height="28" aria-hidden="true" />
+              </a>
+              <a class="showcase-card-status" href="https://curat.money" target="_blank" rel="noopener">curat.money <span class="badge-arrow" aria-hidden="true">↗</span></a>
+            </div>
+            <div>
+              <p class="showcase-card-category">Loyalty Layer for Crypto Cards</p>
+              <h2 class="showcase-card-title"><a href="#curat" class="showcase-card-title-link">Curat</a></h2>
+              <p class="showcase-card-desc">Building the foundational loyalty layer for crypto cards. Powering unified cardholder rewards, staking perks, and global crypto card discovery.</p>
+            </div>
+            <a class="showcase-card-link" href="#curat">Inspect Curat <span aria-hidden="true">↓</span></a>
+          </article>
+
+          <!-- 4. VeriCite Card -->
+          <article class="showcase-card">
+            <div class="showcase-card-top">
+              <a href="#vericite" class="showcase-card-logo-link" aria-label="Inspect VeriCite">
+                <img src="assets/images/product-logos/icon-vericite.svg" alt="" class="showcase-card-logo" width="28" height="28" aria-hidden="true" />
+              </a>
+              <a class="showcase-card-status" href="https://console.vericite.ai" target="_blank" rel="noopener">vericite.ai <span class="badge-arrow" aria-hidden="true">↗</span></a>
+            </div>
+            <div>
+              <p class="showcase-card-category">Institutional Knowledge Retrieval</p>
+              <h2 class="showcase-card-title"><a href="#vericite" class="showcase-card-title-link">VeriCite</a></h2>
+              <p class="showcase-card-desc">Institutional multi-tenant RAG platform with strict query-time tenant boundaries, HF TEI embeddings, and cross-encoder reranking.</p>
+            </div>
+            <a class="showcase-card-link" href="#vericite">Inspect VeriCite <span aria-hidden="true">↓</span></a>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="partners">
-      <div class="container">
-        <p class="partners-label">Trusted by forward-thinking companies</p>
-        <div class="partners-grid">
-          <!-- DigitalOcean -->
-          <div class="partner-cell">
-            <img src="assets/images/partners 2/digitalocean-2.svg" alt="DigitalOcean">
-          </div>
+    <!-- Trusted Partners & Client Logo Grid -->
+    <section class="partners container" id="partners" aria-labelledby="partners-title">
+      <div class="partners-heading">
+        <h2 id="partners-title">Trusted by Global Enterprises &amp; Institutions</h2>
+        <span>Relationships built across our 10-year operating history</span>
+      </div>
 
-          <!-- DAMAC -->
-          <div class="partner-cell">
-            <img src="assets/images/partners 2/Damac_logo.svg.png" alt="DAMAC">
-          </div>
-
-          <!-- Reliance -->
-          <div class="partner-cell">
-            <img src="assets/images/partners 2/Reliance_Industries.svg.png" alt="Reliance Industries">
-          </div>
-
-          <!-- PwC -->
-          <div class="partner-cell">
-            <img src="assets/images/partners 2/PricewaterhouseCoopers_Logo.svg.png" alt="PwC">
-          </div>
-
-          <!-- Australian Government -->
-          <div class="partner-cell">
-            <img src="assets/images/partners 2/australian government.png" alt="Australian Government"
-              class="logo-large" />
-          </div>
-
-          <!-- VIT -->
-          <div class="partner-cell">
-            <img
-              src="assets/images/partners 2/small_Vellore_Institute_of_Technology_Business_School_VIT_BS_54186d8069_26f401a9aa_b4584782bc_2c9b4d4396.png"
-              alt="VIT" class="logo-medium">
-          </div>
-
-          <!-- AWS -->
-          <div class="partner-cell">
-            <img src="assets/images/partners 2/Amazon_Web_Services_Logo.svg.png" alt="AWS">
-          </div>
-
-          <!-- Zoho -->
-          <div class="partner-cell">
-            <img src="assets/images/partners 2/Zoho-logo.png" alt="Zoho">
-          </div>
+      <div class="partners-grid" role="region" aria-label="Partner and client logos">
+        <div class="partner-logo">
+          <img src="assets/images/partners/digitalocean.svg" alt="DigitalOcean" loading="lazy" width="170" height="48" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/images/partners/damac.svg" alt="DAMAC Properties" loading="lazy" width="170" height="44" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/images/partners/reliance.svg" alt="Reliance Industries" loading="lazy" width="170" height="50" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/images/partners/pwc.svg" alt="PwC (PricewaterhouseCoopers)" loading="lazy" width="105" height="50" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/images/partners/australian-government.svg" alt="Australian Government" loading="lazy" width="170" height="52" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/images/partners/vit.svg" alt="VIT (Vellore Institute of Technology)" loading="lazy" width="155" height="50" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/images/partners/aws.svg" alt="Amazon Web Services" loading="lazy" width="115" height="50" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/images/partners/zoho.svg" alt="Zoho Corporation" loading="lazy" width="135" height="46" />
         </div>
       </div>
     </section>
 
-    <section class="ecosystems">
-      <div class="container ecosystems-shell">
-        <h2 class="ecosystems-title">Ecosystems in which we have forged ventures</h2>
-        <p class="ecosystems-intro">A few of the arenas where we have compounded.</p>
-        <div class="ecosystems-grid">
-          <article class="ecosystem-pill card-spotlight card-infra">
-            <div class="card-content">
-              <span class="ecosystem-pill__icon" aria-hidden="true">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                  <path d="M3 9l18 0"></path>
-                  <path d="M9 3l0 18"></path>
-                </svg>
-              </span>
-              <div class="ecosystem-pill__copy">
-                <h3>Infra + AI <span>(2025 Onwards)</span></h3>
-                <p>Building the foundational systems that power tomorrow.</p>
-              </div>
-            </div>
-            <div class="card-glow"></div>
-          </article>
-          <article class="ecosystem-pill card-spotlight card-blockchain">
-            <div class="card-content">
-              <span class="ecosystem-pill__icon" aria-hidden="true">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M2 12h20"></path>
-                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                  </path>
-                </svg>
-              </span>
-              <div class="ecosystem-pill__copy">
-                <h3>Blockchain <span>(2020 Onwards)</span></h3>
-                <p>You know what we’re working on, don’t you?</p>
-              </div>
-            </div>
-            <div class="card-glow"></div>
-          </article>
-          <article class="ecosystem-pill card-fund">
-            <div class="card-content">
-              <span class="ecosystem-pill__icon" aria-hidden="true">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                  <polyline points="17 6 23 6 23 12"></polyline>
-                </svg>
-              </span>
-              <div class="ecosystem-pill__copy">
-                <h3>Fund Manager <span>(2018)</span></h3>
-                <p>How can we get 10x returns?</p>
-              </div>
-            </div>
-            <div class="card-glow"></div>
-          </article>
-          <article class="ecosystem-pill card-payments">
-            <div class="card-content">
-              <span class="ecosystem-pill__icon" aria-hidden="true">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-                  <line x1="1" y1="10" x2="23" y2="10"></line>
-                </svg>
-              </span>
-              <div class="ecosystem-pill__copy">
-                <h3>Payments <span>(2017)</span></h3>
-                <p>Are bank account transactions seamless?</p>
-              </div>
-            </div>
-            <div class="card-glow"></div>
-          </article>
-          <article class="ecosystem-pill card-adtech">
-            <div class="card-content">
-              <span class="ecosystem-pill__icon" aria-hidden="true">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="18" y="3" width="4" height="18"></rect>
-                  <rect x="10" y="8" width="4" height="13"></rect>
-                  <rect x="2" y="13" width="4" height="8"></rect>
-                </svg>
-              </span>
-              <div class="ecosystem-pill__copy">
-                <h3>Ad Tech <span>(2017)</span></h3>
-                <p>It’s not rocket science, just an illusion.</p>
-              </div>
-            </div>
-            <div class="card-glow"></div>
-          </article>
-          <article class="ecosystem-pill card-travel">
-            <div class="card-content">
-              <span class="ecosystem-pill__icon" aria-hidden="true">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                  </path>
-                </svg>
-              </span>
-              <div class="ecosystem-pill__copy">
-                <h3>Travel <span>(2016)</span></h3>
-                <p>Why do we have to pay convenience fee?</p>
-              </div>
-            </div>
-            <div class="card-glow"></div>
-          </article>
-           <article class="ecosystem-pill card-news">
-             <div class="card-content">
-               <span class="ecosystem-pill__icon" aria-hidden="true">
-                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                   <path
-                     d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
-                   </path>
-                   <path d="M18 14h-8"></path>
-                   <path d="M15 18h-5"></path>
-                   <path d="M10 6h8v4h-8V6Z"></path>
-                 </svg>
-               </span>
-               <div class="ecosystem-pill__copy">
-                 <h3>News Media <span>(2015)</span></h3>
-                 <p>Influencing the target audience is tricky.</p>
-               </div>
-             </div>
-             <div class="card-glow"></div>
-           </article>
+    <!-- Operating Thesis / Two Disciplines Router -->
+    <section class="router-section container" id="platform" aria-labelledby="router-title">
+      <div class="section-header-split">
+        <div>
+          <p class="section-eyebrow">01 / The Operating Doctrine</p>
+          <h2 id="router-title">Two Disciplines.<br>One Uncompromising Standard.</h2>
         </div>
-      </div>
-    </section>
-
-
-
-    <section class="founder">
-      <div class="container founder-content">
-        <h2 class="founder-title">The Architects</h2>
-        <p class="founder-intro">
-          Architecting systems that compound. Building ventures that last.
+        <p class="section-lead">
+          We operate across frontier systems engineering and ground-truth business operations, united by verifiable code, tenant-isolated data, and durable unit economics.
         </p>
-        <div class="founder-grid">
-          <div class="founder-card">
-            <img src="assets/images/madhur.jpg" alt="Madhur Satija" class="founder-image">
-            <h3>Madhur Satija</h3>
-            <p class="founder-role">CEO <span class="role-subtitle">(Chief Execution Officer)</span></p>
-            <p class="founder-bio">
-              Full stack operator and generalist. A builder who turned curiosity into ventures across blockchain,
-              fintech, and beyond.
-              He architects systems that compound. From news media to Web3,
-              his path has been deliberate: solve real problems, build with precision, scale with purpose.
-              No fluff. Just execution.
+      </div>
+
+      <div class="router-cards">
+        <article class="router-card">
+          <figure class="router-card-image">
+            <img src="assets/images/pillar-systems.webp" alt="Frontier AI and compute infrastructure interface preview" width="1200" height="750" loading="lazy" />
+          </figure>
+          <div class="router-card-body">
+            <p class="router-card-tag">Pillar A · Systems &amp; Compute</p>
+            <h3>Frontier AI &amp; Infrastructure</h3>
+            <p>
+              Solving foundational compute routing, regional latency bottlenecks, and auditable enterprise knowledge retrieval. Engineered with Go, Hugging Face TEI, and purpose-built vector stores.
             </p>
-            <div class="founder-socials">
-              <a href="https://www.linkedin.com/in/themadhursatija/" target="_blank" rel="noopener"
-                aria-label="Madhur Satija on LinkedIn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
-              </a>
-              <a href="https://x.com/madhursatija" target="_blank" rel="noopener" aria-label="Madhur Satija on X">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
+            <div class="router-card-products">
+              <span class="product-chip">ClusterBid · GPU Cloud</span>
+              <span class="product-chip">VeriCite · Institutional RAG</span>
             </div>
+            <a class="router-card-action" href="#clusterbid">Inspect Systems Architecture <span aria-hidden="true">→</span></a>
           </div>
-          <div class="founder-card">
-            <img src="assets/images/abhishek.jpg" alt="Abhishek Kaushik" class="founder-image">
-            <h3>Abhishek Kaushik</h3>
-            <p class="founder-role">CTO <span class="role-subtitle">(Chief Troubleshooting Officer)</span></p>
-            <p class="founder-bio">
-              A technical architect who speaks in code and systems. Deeply rooted in blockchain and full-stack
-              engineering, he builds the digital infrastructure that compounds value. An algorithm enthusiast who turns
-              complex logic into seamless reality.
+        </article>
+
+        <article class="router-card">
+          <figure class="router-card-image">
+            <img src="assets/images/pillar-commerce.webp" alt="Operational commerce and digital asset intelligence interface preview" width="1200" height="750" loading="lazy" />
+          </figure>
+          <div class="router-card-body">
+            <p class="router-card-tag">Pillar B · Applied Commerce</p>
+            <h3>Operational Software &amp; Finance</h3>
+            <p>
+              Eradicating manual ledger friction, informal debt fragility in traditional MSME supply chains, and opaque custody disclosures in digital asset finance.
             </p>
-            <div class="founder-socials">
-              <a href="https://github.com/Zireael26" target="_blank" rel="noopener"
-                aria-label="Abhishek Kaushik on GitHub">
-                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
-                  <path
-                    d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.52 7.52 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
-                </svg>
-              </a>
+            <div class="router-card-products">
+              <span class="product-chip">Neev · MSME Platform</span>
+              <span class="product-chip">Curat · Loyalty &amp; Card Infrastructure</span>
+            </div>
+            <a class="router-card-action" href="#neev">Inspect Applied Operations <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Deep Fleet Showcase (Interactive Tabs) -->
+    <section class="fleet-section container" id="fleet" aria-labelledby="fleet-title">
+      <div class="section-header-split">
+        <div>
+          <p class="section-eyebrow">02 / The Product Fleet</p>
+          <h2 id="fleet-title">Purpose-Built Products.<br>Verified Execution.</h2>
+        </div>
+        <p class="section-lead">
+          Four independent operating companies built on rigorous foundations. Select any product below to inspect its operational model, technical architecture, and current stage.
+        </p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="product-tabs-bar" data-product-tabs role="tablist" aria-label="Explore our products">
+        <button class="product-tab-btn" role="tab" aria-selected="true" aria-controls="clusterbid" id="tab-clusterbid" type="button">
+          <span class="tab-btn-title">
+            <span>ClusterBid</span>
+            <img src="assets/images/product-logos/icon-clusterbid.svg" alt="" class="tab-btn-icon" width="20" height="20" aria-hidden="true" />
+          </span>
+          <span class="tab-btn-category">AI &amp; GPU Infrastructure</span>
+        </button>
+
+        <button class="product-tab-btn" role="tab" aria-selected="false" aria-controls="neev" id="tab-neev" type="button" tabindex="-1">
+          <span class="tab-btn-title">
+            <span>Neev</span>
+            <img src="assets/images/product-logos/icon-neev.svg" alt="" class="tab-btn-icon" width="20" height="20" aria-hidden="true" />
+          </span>
+          <span class="tab-btn-category">MSME Operations</span>
+        </button>
+
+        <button class="product-tab-btn" role="tab" aria-selected="false" aria-controls="curat" id="tab-curat" type="button" tabindex="-1">
+          <span class="tab-btn-title">
+            <span>Curat</span>
+            <img src="assets/images/product-logos/icon-curat.png" alt="" class="tab-btn-icon" width="20" height="20" aria-hidden="true" />
+          </span>
+          <span class="tab-btn-category">Crypto Card Loyalty</span>
+        </button>
+
+        <button class="product-tab-btn" role="tab" aria-selected="false" aria-controls="vericite" id="tab-vericite" type="button" tabindex="-1">
+          <span class="tab-btn-title">
+            <span>VeriCite</span>
+            <img src="assets/images/product-logos/icon-vericite.svg" alt="" class="tab-btn-icon" width="20" height="20" aria-hidden="true" />
+          </span>
+          <span class="tab-btn-category">Institutional Retrieval</span>
+        </button>
+      </div>
+
+      <!-- Tab Panels -->
+      <div class="product-panels-container">
+        <!-- Panel 1: ClusterBid -->
+        <section class="product-panel" id="clusterbid" role="tabpanel" aria-labelledby="tab-clusterbid">
+          <div class="product-copy">
+            <div>
+              <div class="product-header-badges">
+                <span class="badge-tag">AI &amp; GPU Infrastructure</span>
+              </div>
+              <h3>A region-pinned inference platform for the token economy.</h3>
+              <p class="problem-statement">
+                Engineering teams running high-throughput AI models face opaque multi-cloud routing, disjointed billing contracts, and unpredictable regional latencies. ClusterBid unifies the gateway, console, metering, and reconciliation into a single deterministic deployment.
+              </p>
+
+              <ul class="product-features-list">
+                <li>Region-aware infrastructure routing and single-VM k3s UAT verification</li>
+                <li>Real-time token metering and automated billing reconciliation</li>
+                <li>Unified Go workspace modules with strict Next.js console contracts</li>
+              </ul>
+
+              <details class="architecture-details">
+                <summary>How it is built (Platform Architecture)</summary>
+                <p>Go workspace services, Next.js console client, Helm overlay, single-VM k3s deployment with valid TLS, and automated process-gate tooling.</p>
+              </details>
+            </div>
+
+            <div>
+              <div class="product-actions-bar">
+                <a class="button" href="https://clusterbid.com" target="_blank" rel="noopener">Visit Website <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://akaushik.org/work/clusterbid" target="_blank" rel="noopener">Technical Overview <span aria-hidden="true">↗</span></a>
+              </div>
+              <p class="product-qualification">
+                Currently in pre-production, with platform flows exercised in a mock-inference UAT environment.
+              </p>
             </div>
           </div>
 
+          <div class="product-visual">
+            <figure class="product-interface-figure">
+              <img src="assets/images/product-clusterbid.webp" alt="ClusterBid regional GPU inference gateway console showing latency nodes and NATS token stream" width="1400" height="960" />
+            </figure>
+          </div>
+        </section>
+
+        <!-- Panel 2: Neev -->
+        <section class="product-panel" id="neev" role="tabpanel" aria-labelledby="tab-neev">
+          <div class="product-copy">
+            <div>
+              <div class="product-header-badges">
+                <span class="badge-tag">MSME Supply Chain Operations</span>
+              </div>
+              <h3>Bringing operational intelligence to businesses still run on paper.</h3>
+              <p class="problem-statement">
+                63 million Indian MSMEs run on WhatsApp messages, paper ledgers, and fragile memory. Generic ERPs fail because they demand foreign workflows. Neev meets operators in their daily rhythm and removes friction where it actually hurts.
+              </p>
+
+              <ul class="product-features-list">
+                <li>Order capture and balance reconciliation tailored to textile distribution</li>
+                <li>Strict tenant_id persistence boundaries in a robust modular monolith</li>
+                <li>Operator-in-control AI assistance that reduces typing without removing human judgment</li>
+              </ul>
+
+              <details class="architecture-details">
+                <summary>How it is built (Platform Architecture)</summary>
+                <p>Next.js on Postgres-backed monolith, strict tenant_id database invariants, domain models for textile orders and ledgers, and custom process-gate automation.</p>
+              </details>
+            </div>
+
+            <div>
+              <div class="product-actions-bar">
+                <a class="button" href="https://app.onneev.com" target="_blank" rel="noopener">Visit Website <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://akaushik.org/work/neev" target="_blank" rel="noopener">Technical Overview <span aria-hidden="true">↗</span></a>
+              </div>
+              <p class="product-qualification">
+                First platform version deployed; operator field validation ongoing.
+              </p>
+            </div>
+          </div>
+
+          <div class="product-visual">
+            <figure class="product-interface-figure">
+              <img src="assets/images/product-neev.webp" alt="Neev MSME textile distributor operations console with order parsing and GST ledger" width="1400" height="960" />
+            </figure>
+          </div>
+        </section>
+
+        <!-- Panel 3: Curat -->
+        <section class="product-panel" id="curat" role="tabpanel" aria-labelledby="tab-curat">
+          <div class="product-copy">
+            <div>
+              <div class="product-header-badges">
+                <span class="badge-tag">Loyalty Layer for Crypto Cards</span>
+              </div>
+              <h3>The loyalty layer for crypto cards. Enabling unified rewards and global discovery.</h3>
+              <p class="problem-statement">
+                Crypto cardholders are fragmented across siloed programs without portable rewards, staking perks, or transparent custody disclosures. Curat unifies the cardholder experience: powering cross-card loyalty, cardholder benefits, and source-checked crypto card discovery.
+              </p>
+
+              <ul class="product-features-list">
+                <li>Unified reward and perk infrastructure for modern crypto cardholders</li>
+                <li>Explicit custody status verification: Self-Custody vs Centralized Issuer</li>
+                <li>Global card discovery with automated fee, FX rate, and collateral indexing</li>
+              </ul>
+
+              <details class="architecture-details">
+                <summary>How it is built (Platform Architecture)</summary>
+                <p>Kubernetes cluster on Cloud Build CI/CD, Python automated normalization engine, role-based access control, and environment parity between local and production.</p>
+              </details>
+            </div>
+
+            <div>
+              <div class="product-actions-bar">
+                <a class="button" href="https://curat.money" target="_blank" rel="noopener">Visit Website <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://akaushik.org/work/curat-money" target="_blank" rel="noopener">Technical Overview <span aria-hidden="true">↗</span></a>
+              </div>
+              <p class="product-qualification">
+                Loyalty infrastructure and source-checked directory; does not constitute financial advice.
+              </p>
+            </div>
+          </div>
+
+          <div class="product-visual">
+            <figure class="product-interface-figure">
+              <img src="assets/images/product-curat.webp?v=2" alt="Curat crypto card discovery and loyalty platform interface" width="3566" height="2106" />
+            </figure>
+          </div>
+        </section>
+
+        <!-- Panel 4: VeriCite -->
+        <section class="product-panel" id="vericite" role="tabpanel" aria-labelledby="tab-vericite">
+          <div class="product-copy">
+            <div>
+              <div class="product-header-badges">
+                <span class="badge-tag">Institutional Knowledge Retrieval</span>
+              </div>
+              <h3>A retrieval-augmented generation stack institutions can audit.</h3>
+              <p class="problem-statement">
+                When legal teams, universities, or regulators query an AI knowledge system, answers must be mathematically grounded and tenant-isolated. VeriCite enforces boundaries at the retrieval layer rather than relying on brittle post-query filters.
+              </p>
+
+              <ul class="product-features-list">
+                <li>Tenant-scoped Qdrant collections with query-time payload security barriers</li>
+                <li>Decoupled transformer pipeline: multilingual embeddings + BGE reranking via HF TEI</li>
+                <li>Ory-powered enterprise identity covering SSO and role hierarchies</li>
+              </ul>
+
+              <details class="architecture-details">
+                <summary>How it is built (Platform Architecture)</summary>
+                <p>Hugging Face Text Embeddings Inference (TEI), Qdrant vector database, Ory identity management, monorepo with Kubernetes manifests and Vercel-deployed surfaces.</p>
+              </details>
+            </div>
+
+            <div>
+              <div class="product-actions-bar">
+                <a class="button" href="https://console.vericite.ai" target="_blank" rel="noopener">Visit Website <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://akaushik.org/work/vericite" target="_blank" rel="noopener">Technical Overview <span aria-hidden="true">↗</span></a>
+              </div>
+              <p class="product-qualification">
+                Retrieval architecture verified in monorepo CI/CD; institutional pilot deployments tailored per security covenant.
+              </p>
+            </div>
+          </div>
+
+          <div class="product-visual">
+            <figure class="product-interface-figure">
+              <img src="assets/images/product-vericite.webp" alt="VeriCite institutional tenant boundary retrieval inspector with rerank scores" width="1400" height="960" />
+            </figure>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Executive Philosophy Section (data-theme="gray") -->
+    <section class="quote-section" id="philosophy" data-theme="gray" aria-labelledby="philosophy-title">
+      <div class="container quote-shell">
+        <p class="section-eyebrow" id="philosophy-title">Our Operating Philosophy</p>
+
+        <div class="quote-switcher">
+          <div class="quote-toggle-bar" role="tablist" aria-label="Executive philosophy quotes">
+            <button class="quote-toggle-btn is-active" role="tab" id="tab-quote-madhur" aria-selected="true" aria-controls="quote-madhur" type="button">
+              01 / Strategy &amp; Execution · Madhur Satija
+            </button>
+            <button class="quote-toggle-btn" role="tab" id="tab-quote-abhishek" aria-selected="false" aria-controls="quote-abhishek" type="button" tabindex="-1">
+              02 / Systems &amp; Architecture · Abhishek Kaushik
+            </button>
+          </div>
+        </div>
+
+        <div class="quote-container" aria-live="polite">
+          <div class="quote-slide is-active" id="quote-madhur" role="tabpanel" aria-labelledby="tab-quote-madhur">
+            <blockquote class="quote-text">
+              “At BeepWeep, we attract those who solve problems with precision, not ego. Who chase outcomes, not optics. This is where status takes a back seat to substance. Where clarity leads, and wealth compounds.”
+            </blockquote>
+            <div class="quote-author">
+              <img class="quote-avatar" src="assets/images/madhur.jpg" alt="Madhur Satija" loading="lazy" width="44" height="44" />
+              <div class="quote-author-info">
+                <div class="quote-author-name">Madhur Satija</div>
+                <div class="quote-author-role">Founder &amp; CEO · Chief Execution Officer</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quote-slide" id="quote-abhishek" role="tabpanel" aria-labelledby="tab-quote-abhishek">
+            <blockquote class="quote-text">
+              “The most exciting place for systems right now isn't another consumer abstraction. It's building infrastructure that businesses can actually run: going to the foundations, with hard tenant boundaries and receipts over promises.”
+            </blockquote>
+            <div class="quote-author">
+              <img class="quote-avatar" src="assets/images/abhishek.jpg" alt="Abhishek Kaushik" loading="lazy" width="44" height="44" />
+              <div class="quote-author-info">
+                <div class="quote-author-name">Abhishek Kaushik</div>
+                <div class="quote-author-role">Co-Founder &amp; CTO · Chief Troubleshooting Officer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quote-nav">
+          <button type="button" class="quote-nav-btn quote-prev" aria-label="Previous quote">←</button>
+          <span class="quote-index">1 / 2</span>
+          <button type="button" class="quote-nav-btn quote-next" aria-label="Next quote">→</button>
         </div>
       </div>
     </section>
 
-    <footer class="site-footer" id="contact">
-      <div class="container footer-bottom-grid">
-        <p class="footer-legal">&copy; 2015 to <span id="current-year"></span> | <strong>BeepWeep Ventures.</strong> All
-          rights reserved.</p>
-        <nav class="footer-links-buttons">
-          <a href="privacy.html" class="footer-button" aria-label="Privacy Policy">
-            <span>PRIVACY POLICY</span>
+    <!-- Provenance & Stats (data-theme="black") -->
+    <section class="stats-section" data-theme="black" aria-labelledby="stats-title">
+      <div class="container">
+        <p class="section-eyebrow" style="color:#adaba5;">Provenance &amp; Compounding</p>
+        <div class="section-header-split" style="margin-bottom:0;">
+          <h2 id="stats-title" style="color:#fafaf9;">A Decade of Compounding<br>Systems &amp; Capital.</h2>
+          <p class="section-lead" style="color:#adaba5;">
+            From early publishing and payments in 2015 to regional GPU orchestration and institutional knowledge systems in 2026.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Years Operating</div>
+            <div class="stat-desc">Forging ventures and deploying software continuously since 2015.</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number">4</div>
+            <div class="stat-label">Active Flagships</div>
+            <div class="stat-desc">Independent operating companies across infrastructure, finance, and trade.</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Ecosystems Scaled</div>
+            <div class="stat-desc">From Web3 and payments to algorithmic media and regional inference.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Historical Arenas Timeline -->
+    <section class="journey-section container" id="journey" aria-labelledby="journey-title">
+      <div class="journey-layout">
+        <div class="journey-intro">
+          <p class="section-eyebrow">03 / The Compounding Journey</p>
+          <h2 id="journey-title">Ecosystems in which<br>we have forged ventures.</h2>
+          <p>
+            A consistent instinct to identify friction, eliminate intermediary tolls, and build lasting software. These are the arenas that shaped our operating discipline.
+          </p>
+        </div>
+
+        <div class="journey-table timeline">
+          <div class="timeline-cursor-line" aria-hidden="true"></div>
+          <article class="journey-row">
+            <div class="journey-year-col">
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <span class="journey-year">2025 onwards</span>
+            </div>
+            <div class="journey-content">
+              <h3>Infra + AI</h3>
+              <p>Building the foundational systems that power tomorrow. (ClusterBid &amp; VeriCite)</p>
+            </div>
+          </article>
+
+          <article class="journey-row">
+            <div class="journey-year-col">
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <span class="journey-year">2020 onwards</span>
+            </div>
+            <div class="journey-content">
+              <h3>Blockchain &amp; Web3</h3>
+              <p>Decentralised protocols, non-custodial custody models, and transparent financial rails. (Curat)</p>
+            </div>
+          </article>
+
+          <article class="journey-row">
+            <div class="journey-year-col">
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <span class="journey-year">2018</span>
+            </div>
+            <div class="journey-content">
+              <h3>Fund Management</h3>
+              <p><span class="journey-question">How can we get 10x returns?</span> Disciplined capital allocation, asymmetry, and compounding.</p>
+            </div>
+          </article>
+
+          <article class="journey-row">
+            <div class="journey-year-col">
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <span class="journey-year">2017</span>
+            </div>
+            <div class="journey-content">
+              <h3>Payments</h3>
+              <p><span class="journey-question">Are bank account transactions seamless?</span> Removing friction in settlement rails.</p>
+            </div>
+          </article>
+
+          <article class="journey-row">
+            <div class="journey-year-col">
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <span class="journey-year">2017</span>
+            </div>
+            <div class="journey-content">
+              <h3>Ad Tech</h3>
+              <p><span class="journey-question">It’s not rocket science, just an illusion.</span> Decoding programmatic distribution and audience attention.</p>
+            </div>
+          </article>
+
+          <article class="journey-row">
+            <div class="journey-year-col">
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <span class="journey-year">2016</span>
+            </div>
+            <div class="journey-content">
+              <h3>Travel</h3>
+              <p><span class="journey-question">Why do we have to pay a convenience fee?</span> Eliminating unnecessary markups in ticketing.</p>
+            </div>
+          </article>
+
+          <article class="journey-row">
+            <div class="journey-year-col">
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <span class="journey-year">2015</span>
+            </div>
+            <div class="journey-content">
+              <h3>News Media</h3>
+              <p><span class="journey-question">Influencing the target audience is tricky.</span> High-velocity publishing, reach, and organic engagement.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership / The Architects -->
+    <section class="team-section container" id="team" aria-labelledby="team-title">
+      <div class="section-header-split">
+        <div>
+          <p class="section-eyebrow">04 / Leadership</p>
+          <h2 id="team-title">The Architects.</h2>
+        </div>
+        <p class="section-lead">
+          Architecting systems that compound. Building ventures that last. Deep technical depth combined with disciplined executive execution.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Abhishek Kaushik -->
+        <article class="team-card person">
+          <div>
+            <div class="team-card-top">
+              <img class="team-image" src="assets/images/abhishek.jpg" alt="Abhishek Kaushik" loading="lazy" width="90" height="90" />
+              <div class="team-name-block">
+                <h3>Abhishek Kaushik</h3>
+                <p class="team-role">CTO · Chief Troubleshooting Officer</p>
+              </div>
+            </div>
+            <p class="team-bio">
+              A technical architect who speaks in code and systems. Deeply rooted in blockchain and full-stack engineering, he builds the digital infrastructure that compounds value. Platform engineer on agent systems, algorithm enthusiast, and architect of institutional RAG pipelines and verifiable software regimes.
+            </p>
+          </div>
+          <div class="team-socials">
+            <a href="https://github.com/Zireael26" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://akaushik.org/" target="_blank" rel="noopener">Personal Web ↗</a>
+          </div>
+        </article>
+
+        <!-- Madhur Satija -->
+        <article class="team-card person">
+          <div>
+            <div class="team-card-top">
+              <img class="team-image" src="assets/images/madhur.jpg" alt="Madhur Satija" loading="lazy" width="90" height="90" />
+              <div class="team-name-block">
+                <h3>Madhur Satija</h3>
+                <p class="team-role">CEO · Chief Execution Officer</p>
+              </div>
+            </div>
+            <p class="team-bio">
+              Full stack operator and generalist. A builder who turned curiosity into ventures across blockchain, fintech, and beyond. He architects systems that compound. From news media to Web3, his path has been deliberate: solve real problems, build with precision, scale with purpose. No fluff. Just execution.
+            </p>
+          </div>
+          <div class="team-socials">
+            <a href="https://www.linkedin.com/in/themadhursatija/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a href="https://x.com/madhursatija" target="_blank" rel="noopener">X (Twitter) ↗</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="careers-strip">
+        <p>Good work starts with curious people. We are always looking for 10x engineers and full-stack builders.</p>
+        <a class="button button-small" href="https://wellfound.com/company/beepweep" target="_blank" rel="noopener">View Open Roles on Wellfound <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <!-- Enterprise Security & Governance Section -->
+    <section class="governance-section container" id="governance" aria-labelledby="governance-title">
+      <div class="section-header-split">
+        <div>
+          <p class="section-eyebrow">Engineering Reputation</p>
+          <h2 id="governance-title">Enterprise-Grade Rigor &amp; Security Controls.</h2>
+        </div>
+        <p class="section-lead">
+          Our products are engineered to withstand adversarial scrutiny, regulatory inspection, and strict data sovereignty standards.
+        </p>
+      </div>
+
+      <div class="governance-grid">
+        <div class="governance-card">
+          <h3>Strict Multi-Tenant Isolation</h3>
+          <p>Hard tenant_id invariants enforced at the database and query layer. Vectors and customer documents never cross isolation boundaries.</p>
+        </div>
+
+        <div class="governance-card">
+          <h3>Deterministic Verification</h3>
+          <p>Every commit backed by automated process gates, unit receipts, and reproducible UAT environments.</p>
+        </div>
+
+        <div class="governance-card">
+          <h3>Zero Speculative Debt</h3>
+          <p>Pragmatic modular monoliths over premature microservices. Systems sized for real operational durability.</p>
+        </div>
+
+        <div class="governance-card">
+          <h3>Global Compliance Hygiene</h3>
+          <p>Designed in alignment with GDPR, CCPA, and regional institutional data governance standards.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Coordinates / Hubs -->
+    <section class="coordinates-section container" id="coordinates" aria-labelledby="coordinates-title">
+      <p class="section-eyebrow">Our Coordinates</p>
+      <h2 id="coordinates-title">Two Global Hubs. One Perspective.</h2>
+
+      <div class="coordinates-grid">
+        <article class="coordinate-card">
+          <div>
+            <h3>Dubai</h3>
+            <p class="coordinate-role">Global Headquarters</p>
+          </div>
+          <div class="coordinate-details">
+            <p>United Arab Emirates</p>
+            <p>Venture Strategy · Global Capital</p>
+          </div>
+        </article>
+
+        <article class="coordinate-card">
+          <div>
+            <h3>Gurgaon</h3>
+            <p class="coordinate-role">Engineering Hub</p>
+          </div>
+          <div class="coordinate-details">
+            <p>India</p>
+            <p>Core Systems · Architecture · Build</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Grand Final CTA (data-theme="black") -->
+    <section class="cta-banner-section" data-theme="black" aria-labelledby="cta-title">
+      <div class="container cta-banner-content">
+        <h2 id="cta-title">Build what compounds.<br>Substance over status.</h2>
+
+        <div class="cta-banner-actions">
+          <p>
+            Whether you are evaluating our product fleet, exploring technical collaboration, or seeking institutional partnership.
+          </p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a class="button" href="contact.html">Initiate Protocol <span aria-hidden="true">→</span></a>
+            <a class="button button-outline" href="https://wellfound.com/company/beepweep" target="_blank" rel="noopener">Explore Careers ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <span>BeepWeep</span>
           </a>
-          <a class="footer-button footer-button-icon" href="https://www.linkedin.com/company/beepweep/" target="_blank"
-            rel="noopener" aria-label="BeepWeep Ventures on LinkedIn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path
-                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-            </svg>
-          </a>
-          <a class="footer-button footer-button-icon" href="https://github.com/beepweep/beepweep.github.io"
-            target="_blank" rel="noopener" aria-label="BeepWeep Ventures on GitHub">
-            <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-              <path
-                d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.52 7.52 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
-            </svg>
-          </a>
+          <p>
+            A haven for the 10x builders, the thinkers, the quiet architects of wealth.
+          </p>
+        </div>
+
+        <nav class="footer-nav-col" aria-label="Product Fleet links">
+          <span class="footer-col-title">Our Fleet</span>
+          <a href="#clusterbid">ClusterBid ↗</a>
+          <a href="#neev">Neev ↗</a>
+          <a href="#curat">Curat ↗</a>
+          <a href="#vericite">VeriCite ↗</a>
+        </nav>
+
+        <nav class="footer-nav-col" aria-label="Company links">
+          <span class="footer-col-title">Organization</span>
+          <a href="#platform">Operating Thesis</a>
+          <a href="#philosophy">Philosophy</a>
+          <a href="#journey">Journey</a>
+          <a href="#team">Leadership</a>
+          <a href="https://wellfound.com/company/beepweep" target="_blank" rel="noopener">Careers ↗</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <nav class="footer-nav-col" aria-label="Connect links">
+          <span class="footer-col-title">Protocol</span>
+          <a href="mailto:hello@beepweep.com">Email ↗</a>
+          <a href="https://www.linkedin.com/company/beepweep/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/beepweep/beepweep.github.io" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://dash.beepweep.com" target="_blank" rel="noopener">Client Login ↗</a>
         </nav>
       </div>
 
-    </footer>
-
-    <div class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie usage notice">
-      <p>We use cookies to improve your experience and analyze site usage. By using our site, you agree to our <a
-          href="#privacy">Privacy Policy</a>.</p>
-      <div class="cookie-banner__countdown" aria-hidden="true"><span>10</span>s</div>
-      <button class="cookie-banner__action" type="button">Okay</button>
+      <div class="footer-bottom">
+        <p>© 2015–<span id="current-year">2026</span> BeepWeep. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <button class="cookie-settings" type="button" hidden>Cookie Settings</button>
+        </div>
+      </div>
     </div>
+  </footer>
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "BeepWeep Ventures",
-        "url": "https://beepweep.github.io",
-        "logo": "https://beepweep.github.io/assets/og-image.png",
-        "description": "A haven for the 10x builders, the thinkers, the quiet architects of wealth.",
-        "sameAs": [
-          "https://github.com/beepweep"
-        ]
-      }
-    </script>
-    <script src="assets/js/main.js" defer></script>
+  <!-- Cookie Banner Modal (Harvey Style) -->
+  <aside class="cookie-banner" aria-label="Cookie preferences" hidden>
+    <p>
+      We use cookies to analyze site traffic and enhance platform experience. By clicking "Accept All", you agree to our <a href="privacy.html">Privacy Policy</a>.
+    </p>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-btn-secondary cookie-decline" type="button">Reject All</button>
+      <button class="cookie-btn cookie-btn-primary cookie-accept" type="button">Accept All</button>
+    </div>
+  </aside>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "BeepWeep Ventures",
+    "url": "https://beepweep.com/",
+    "logo": "https://beepweep.com/assets/images/beepweep-logo.svg",
+    "description": "A haven for the 10x builders, the thinkers, the quiet architects of wealth.",
+    "sameAs": [
+      "https://www.linkedin.com/company/beepweep/",
+      "https://github.com/beepweep"
+    ]
+  }
+  </script>
 </body>
 
 </html>
