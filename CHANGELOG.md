@@ -20,6 +20,16 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Header CTA is Book a Call
 - Leadership grid lists CTO Abhishek Kaushik first
 - SEO title uses Built with Purpose. For what comes next.
+- Mobile header prevents flex wrapping and preserves clean 72px single-row layout
+- Mobile navigation drawer redesigned with left-aligned full-width links, Book a Call CTA, and dedicated Fleet & Platform Logins section
+- Section anchor targets offset by sticky header height via scroll-margin-top
+
+### Fixed
+- Fixed mobile header wrapping into two rows on narrow viewports
+- Fixed desktop login dropdown clipping off-screen when opened on mobile
+- Fixed mobile nav and login dropdown opening simultaneously
+- Decoupled login dropdown and ambient partner wave initialization from cookie banner scope
+- Added body scroll lock on open mobile menu and smooth close on anchor navigation
 
 ### Removed
 - Pre-production / stage pills on live products

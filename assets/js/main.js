@@ -36,13 +36,25 @@
       menuBtn.setAttribute('aria-expanded', String(open));
       menuBtn.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
       nav.classList.toggle('is-open', open);
+      document.body.classList.toggle('menu-open', open);
+
       if (open) {
+        // Close login dropdown if open
+        document.querySelectorAll('.login-dropdown-wrapper').forEach((w) => {
+          const btn = w.querySelector('.login-btn');
+          const menu = w.querySelector('.login-dropdown-menu');
+          if (btn && menu) {
+            btn.setAttribute('aria-expanded', 'false');
+            menu.hidden = true;
+          }
+        });
         const firstLink = nav.querySelector('a');
         if (firstLink) firstLink.focus();
       }
     };
 
-    menuBtn.addEventListener('click', () => {
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
       setMenu(!isOpen);
     });
@@ -66,8 +78,63 @@
       }
     });
 
-    window.matchMedia('(max-width: 900px)').addEventListener('change', () => setMenu(false));
+    try {
+      const mq = window.matchMedia('(max-width: 900px)');
+      const onChange = (e) => {
+        if (!e.matches) {
+          setMenu(false);
+        }
+      };
+      if (typeof mq.addEventListener === 'function') {
+        mq.addEventListener('change', onChange);
+      } else if (typeof mq.addListener === 'function') {
+        mq.addListener(onChange);
+      }
+    } catch (e) {}
   }
+
+  // 3b. Header Login Dropdown Menu
+  document.querySelectorAll('.login-dropdown-wrapper').forEach((wrapper) => {
+    const btn = wrapper.querySelector('.login-btn');
+    const menu = wrapper.querySelector('.login-dropdown-menu');
+    if (!btn || !menu) return;
+
+    const toggleMenu = (open) => {
+      btn.setAttribute('aria-expanded', String(open));
+      menu.hidden = !open;
+      if (open && menuBtn && menuBtn.getAttribute('aria-expanded') === 'true') {
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-label', 'Open navigation');
+        if (nav) nav.classList.remove('is-open');
+        document.body.classList.remove('menu-open');
+      }
+    };
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      toggleMenu(!isOpen);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!wrapper.contains(e.target)) {
+        toggleMenu(false);
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') {
+        toggleMenu(false);
+        btn.focus();
+      }
+    });
+
+    menu.addEventListener('click', (e) => {
+      if (e.target.closest('a')) {
+        toggleMenu(false);
+      }
+    });
+  });
 
   // 4. Accessible Product Tabs System
   const tabList = document.querySelector('[data-product-tabs]');
@@ -141,12 +208,21 @@
     });
 
     // Also handle on-page anchor links pointing to #clusterbid, etc.
+    // preventDefault so the browser doesn't jump to the panel itself and
+    // push a history entry that fights the scroll-spy; keep the product
+    // hash in the URL so refresh/deep-link restores the selected tab.
     document.querySelectorAll('a[href^="#"]').forEach((link) => {
       link.addEventListener('click', (e) => {
-        const targetId = link.getAttribute('href').replace('#', '');
+        const rawHref = link.getAttribute('href');
+        if (!rawHref || rawHref === '#') return;
+        const targetId = rawHref.slice(1);
         const targetIndex = panels.findIndex((p) => p && p.id === targetId);
         if (targetIndex !== -1) {
+          e.preventDefault();
           selectTab(targetIndex, false);
+          try {
+            history.replaceState(null, '', `#${targetId}`);
+          } catch (err) {}
           const fleetEl = document.getElementById('fleet');
           if (fleetEl) {
             fleetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -226,58 +302,7 @@
       settingsOpened = false;
     };
 
-    // 5b. Header Login Dropdown Menu
-    document.querySelectorAll('.login-dropdown-wrapper').forEach((wrapper) => {
-      const btn = wrapper.querySelector('.login-btn');
-      const menu = wrapper.querySelector('.login-dropdown-menu');
-      if (!btn || !menu) return;
 
-      const toggleMenu = (open) => {
-        btn.setAttribute('aria-expanded', String(open));
-        menu.hidden = !open;
-      };
-
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const isOpen = btn.getAttribute('aria-expanded') === 'true';
-        toggleMenu(!isOpen);
-      });
-
-      document.addEventListener('click', (e) => {
-        if (!wrapper.contains(e.target)) {
-          toggleMenu(false);
-        }
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') {
-          toggleMenu(false);
-          btn.focus();
-        }
-      });
-    });
-
-    // 5c. Harvey Partner Logos Ambient Wave Animation
-    const partnersGrid = document.querySelector('.partners-grid');
-    if (partnersGrid && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      const cells = Array.from(partnersGrid.querySelectorAll('.partner-logo'));
-      if (cells.length > 0) {
-        let isHovered = false;
-        partnersGrid.addEventListener('mouseenter', () => { isHovered = true; });
-        partnersGrid.addEventListener('mouseleave', () => { isHovered = false; });
-
-        setInterval(() => {
-          if (isHovered) return;
-          cells.forEach((cell, i) => {
-            setTimeout(() => {
-              if (isHovered) return;
-              cell.classList.add('is-animating');
-              setTimeout(() => cell.classList.remove('is-animating'), 900);
-            }, i * 160);
-          });
-        }, 5500);
-      }
-    }
 
     const currentConsent = readConsent();
     cookieBanner.hidden = currentConsent === 'accepted' || currentConsent === 'declined';
@@ -300,6 +325,28 @@
         cookieBanner.hidden = false;
         if (declineBtn) declineBtn.focus();
       });
+    }
+  }
+
+  // 5b. Harvey Partner Logos Ambient Wave Animation
+  const partnersGrid = document.querySelector('.partners-grid');
+  if (partnersGrid && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const cells = Array.from(partnersGrid.querySelectorAll('.partner-logo'));
+    if (cells.length > 0) {
+      let isHovered = false;
+      partnersGrid.addEventListener('mouseenter', () => { isHovered = true; });
+      partnersGrid.addEventListener('mouseleave', () => { isHovered = false; });
+
+      setInterval(() => {
+        if (isHovered) return;
+        cells.forEach((cell, i) => {
+          setTimeout(() => {
+            if (isHovered) return;
+            cell.classList.add('is-animating');
+            setTimeout(() => cell.classList.remove('is-animating'), 900);
+          }, i * 160);
+        });
+      }, 5500);
     }
   }
 
@@ -357,8 +404,12 @@
 })();
 
   // ── Scroll-spy: keep URL hash in sync so refresh restores scroll position ──
+  // Product panel hashes (#clusterbid, #neev, #curat, #vericite) belong to the
+  // tabs system above; the spy must highlight Fleet for them but never
+  // overwrite them, or deep-links/refresh would reset to the first tab.
   (function initScrollSpy() {
     const NAV_SECTION_IDS = ['platform', 'fleet', 'philosophy', 'journey', 'team', 'coordinates'];
+    const PRODUCT_IDS = ['clusterbid', 'neev', 'curat', 'vericite'];
     const navLinks = Array.from(document.querySelectorAll('.site-nav a[href^="#"]'));
     const sections = NAV_SECTION_IDS.map(id => document.getElementById(id)).filter(Boolean);
 
@@ -371,6 +422,19 @@
 
     // The clean base URL without any hash
     const baseUrl = location.href.split('#')[0];
+
+    function isProductHash(hash) {
+      const id = (hash !== undefined ? hash : window.location.hash).replace('#', '');
+      return PRODUCT_IDS.includes(id);
+    }
+
+    function highlightNav(activeId) {
+      navLinks.forEach(a => {
+        const active = activeId && a.getAttribute('href') === '#' + activeId;
+        a.setAttribute('aria-current', active ? 'page' : 'false');
+        a.classList.toggle('nav-active', !!active);
+      });
+    }
 
     function setHash(newId) {
       if (newId === currentId) return;
@@ -388,6 +452,15 @@
     function recalc() {
       ticking = false;
       if (navScrollLock) return; // nav-click scroll in flight: don't override
+      // A selected product tab owns the URL hash: keep it, but highlight Fleet.
+      if (isProductHash()) {
+        const productId = window.location.hash.replace('#', '');
+        if (currentId !== productId) {
+          currentId = productId;
+          highlightNav('fleet');
+        }
+        return;
+      }
       const TRIGGER = window.innerHeight * 0.4;
       let active = null;
       for (const s of sections) {
