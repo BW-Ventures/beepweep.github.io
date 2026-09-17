@@ -32,7 +32,16 @@
   const menuBtn = document.querySelector('.menu-toggle');
   const nav = document.getElementById('site-nav');
   if (menuBtn && nav) {
+    const updateMenuTop = () => {
+      const bottom = document.querySelector('.site-header').getBoundingClientRect().bottom;
+      nav.style.setProperty('--menu-top', `${bottom}px`);
+    };
+    window.addEventListener('resize', updateMenuTop);
     const setMenu = (open) => {
+      if (open) {
+        updateMenuTop();
+        nav.scrollTop = 0;
+      }
       menuBtn.setAttribute('aria-expanded', String(open));
       menuBtn.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
       nav.classList.toggle('is-open', open);
