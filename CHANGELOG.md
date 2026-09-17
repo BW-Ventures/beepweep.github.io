@@ -6,6 +6,10 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Fixed
+- Compact single-line announcement on mobile and tablet.
+- Consolidate mobile actions in the hamburger menu, correct drawer height and touch scrolling, tighten link spacing, and restore CTA contrast.
+
 ## [2026-09-17]
 
 ### Added

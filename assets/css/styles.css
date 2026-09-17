@@ -2412,6 +2412,9 @@ html.enhanced .quote-nav {
 
 /* --- Responsive Media Queries --- */
 @media (max-width: 1100px) {
+  .site-nav-links {
+    gap: 18px;
+  }
   .site-nav {
     gap: 18px;
     font-size: 0.8125rem;
@@ -2446,12 +2449,22 @@ html.enhanced .quote-nav {
 }
 
 @media (max-width: 900px) {
+  .announcement-banner {
+    min-height: 36px;
+    padding: 6px 38px 6px 12px;
+    gap: 10px;
+    white-space: nowrap;
+  }
+  .announcement-banner > span:not(.announcement-pill) {
+    display: none;
+  }
   .header-shell {
     height: var(--header-height);
     flex-wrap: nowrap;
     gap: 16px;
   }
-  .login-dropdown-wrapper {
+  .login-dropdown-wrapper,
+  .header-actions .button-small {
     display: none !important;
   }
   .section-header-split {
@@ -2467,14 +2480,15 @@ html.enhanced .quote-nav {
   }
   .enhanced .site-nav.is-open {
     display: flex;
-    position: fixed;
-    top: var(--header-height);
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
-    bottom: 0;
     width: 100%;
-    height: calc(100vh - var(--header-height));
-    height: calc(100dvh - var(--header-height));
+    height: calc(100vh - var(--menu-top, 73px));
+    height: calc(100dvh - var(--menu-top, 73px));
+    overscroll-behavior: contain;
+    touch-action: pan-y;
     background: var(--bg-primary);
     border-top: 1px solid var(--border-subtle);
     padding: 20px 24px 48px;
@@ -2491,6 +2505,8 @@ html.enhanced .quote-nav {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    gap: 0;
+    flex-shrink: 0;
     width: 100%;
   }
   .enhanced .site-nav.is-open .site-nav-links a {
@@ -2521,6 +2537,13 @@ html.enhanced .quote-nav {
     gap: 20px;
     margin-top: 24px;
     padding-top: 4px;
+  }
+  .site-nav .mobile-nav-cta,
+  .site-nav .mobile-nav-cta:hover {
+    color: var(--text-inverse);
+  }
+  .mobile-nav-panel {
+    flex-shrink: 0;
   }
   .mobile-nav-cta {
     width: 100%;
@@ -2633,10 +2656,18 @@ html.enhanced .quote-nav {
     width: calc(100% - 24px);
   }
   .announcement-banner {
-    flex-wrap: wrap;
-    padding-right: 40px;
+    flex-wrap: nowrap;
+    min-height: 36px;
+    padding: 6px 38px 6px 12px;
+    gap: 10px;
     font-size: 0.75rem;
-    text-align: center;
+    white-space: nowrap;
+  }
+  .announcement-banner > span:not(.announcement-pill) {
+    display: none;
+  }
+  .announcement-banner a {
+    flex-shrink: 0;
   }
   .careers-strip {
     flex-direction: column;
@@ -2724,7 +2755,10 @@ html.enhanced .quote-nav {
 /* --- Menu Open Body Lock & Section Anchor Offsets --- */
 body.menu-open {
   overflow: hidden !important;
-  touch-action: none;
+}
+
+body.menu-open .site-header {
+  z-index: 1001;
 }
 
 body.menu-open .cookie-banner {
