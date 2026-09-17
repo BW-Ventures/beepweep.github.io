@@ -4,85 +4,111 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy - BeepWeep Ventures</title>
+  <title>Privacy Policy · BeepWeep</title>
   <meta name="description"
-    content="Privacy Policy for BeepWeep Ventures. Learn how we collect, use, and protect your personal information." />
-  <meta name="keywords" content="privacy policy, data protection, GDPR, CCPA, BeepWeep Ventures privacy" />
-  <meta name="author" content="BeepWeep Ventures" />
+    content="Privacy Policy for BeepWeep. Learn how we collect, use, and protect your personal information." />
+  <meta name="keywords" content="privacy policy, data protection, GDPR, CCPA, BeepWeep privacy" />
+  <meta name="author" content="BeepWeep" />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://beepweep.github.io/privacy.html" />
-  <meta property="og:title" content="Privacy Policy - BeepWeep Ventures" />
+  <link rel="canonical" href="https://beepweep.com/privacy.html" />
+  <meta property="og:title" content="Privacy Policy · BeepWeep" />
   <meta property="og:description"
-    content="Privacy Policy for BeepWeep Ventures. Learn how we collect, use, and protect your personal information." />
+    content="Privacy Policy for BeepWeep. Learn how we collect, use, and protect your personal information." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://beepweep.github.io/privacy" />
+  <meta property="og:url" content="https://beepweep.com/privacy.html" />
+  <meta property="og:image" content="https://beepweep.com/assets/images/social-card.png" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Privacy Policy - BeepWeep Ventures" />
+  <meta name="twitter:title" content="Privacy Policy · BeepWeep" />
   <meta name="twitter:description"
     content="Privacy Policy for BeepWeep Ventures. Learn how we collect, use, and protect your personal information." />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBHSMCVXKS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-MBHSMCVXKS');
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap"
-    rel="stylesheet" />
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23ffffff' width='32' height='32'/%3E%3Ctext x='16' y='21' font-family='Inter,%20sans-serif' font-size='14' font-weight='700' text-anchor='middle' fill='%23111111'%3EBW%3C/text%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/beepweep-logo.svg" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=6" />
+  <script src="assets/js/main.js" defer></script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-shell">
-      <a class="brand-mark" href="/">
-        <span class="brand-mark__word">BeepWeep</span>
+      <a class="brand" href="index.html" aria-label="BeepWeep home">
+        <span>BeepWeep</span>
       </a>
-      <span class="header-greeting">
-        <span class="greet" data-label="Hello in English">hello</span>
-        <span class="greet" data-label="Hello in Hindi">नमस्ते</span>
-        <span class="greet" data-label="Hello in Japanese">こんにちは</span>
-        <span class="greet" data-label="Hello in Chinese">你好</span>
-      </span>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html#platform">Platform</a>
+        <a href="index.html#fleet">Our Fleet</a>
+        <a href="index.html#philosophy">Philosophy</a>
+        <a href="index.html#journey">Journey</a>
+        <a href="index.html#team">Leadership</a>
+        <a href="index.html#coordinates">Coordinates</a>
+      </nav>
+
       <div class="header-actions">
-        <a href="https://dash.beepweep.com" class="header-login" target="_blank" rel="noopener">Login</a>
-        <button class="theme-toggle" aria-label="Toggle theme">
-          <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2">
-            <circle cx="12" cy="12" r="5"></circle>
-            <path
-              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
-            </path>
-          </svg>
-          <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" style="display: none;">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
+        <div class="login-dropdown-wrapper">
+          <button class="login-btn" type="button" aria-expanded="false" aria-controls="login-dropdown-menu" id="login-dropdown-btn">
+            <span>Login</span>
+            <svg class="login-chevron" width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M5.5 7.5L10 12L14.5 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="login-dropdown-menu" id="login-dropdown-menu" role="menu" hidden>
+            <a role="menuitem" class="dropdown-item" href="https://dash.beepweep.com" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;">
+              <span class="dropdown-item-inner" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;">
+                <img src="assets/images/product-logos/icon-team.svg" alt="" class="dropdown-icon" width="20" height="20" aria-hidden="true" style="width:20px;height:20px;flex-shrink:0;object-fit:contain;" />
+                <span>Team Login</span>
+              </span>
+              <span class="dropdown-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a role="menuitem" class="dropdown-item" href="https://clusterbid.com/login" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;">
+              <span class="dropdown-item-inner" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;">
+                <img src="assets/images/product-logos/icon-clusterbid.svg" alt="" class="dropdown-icon" width="20" height="20" aria-hidden="true" style="width:20px;height:20px;flex-shrink:0;object-fit:contain;" />
+                <span>ClusterBid</span>
+              </span>
+              <span class="dropdown-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a role="menuitem" class="dropdown-item" href="https://app.onneev.com/login" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;">
+              <span class="dropdown-item-inner" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;">
+                <img src="assets/images/product-logos/icon-neev.svg" alt="" class="dropdown-icon" width="20" height="20" aria-hidden="true" style="width:20px;height:20px;flex-shrink:0;object-fit:contain;" />
+                <span>Neev</span>
+              </span>
+              <span class="dropdown-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a role="menuitem" class="dropdown-item" href="https://curat.money/auth-user/login" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;">
+              <span class="dropdown-item-inner" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;">
+                <img src="assets/images/product-logos/icon-curat.png" alt="" class="dropdown-icon" width="20" height="20" aria-hidden="true" style="width:20px;height:20px;flex-shrink:0;object-fit:contain;" />
+                <span>Curat</span>
+              </span>
+              <span class="dropdown-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a role="menuitem" class="dropdown-item" href="https://console.vericite.ai/login" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;">
+              <span class="dropdown-item-inner" style="display:inline-flex;align-items:center;gap:10px;white-space:nowrap;">
+                <img src="assets/images/product-logos/icon-vericite.svg" alt="" class="dropdown-icon" width="20" height="20" aria-hidden="true" style="width:20px;height:20px;flex-shrink:0;object-fit:contain;" />
+                <span>VeriCite</span>
+              </span>
+              <span class="dropdown-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+        <a class="button button-small" href="contact.html">Book a Call</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
+          aria-label="Open navigation">
+          <span></span>
+          <span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="privacy-hero">
-      <div class="container">
-        <h1>Privacy Policy</h1>
-        <p class="privacy-subtitle">Last updated: October 2024</p>
-      </div>
+  <main id="main" tabindex="-1">
+    <section class="page-hero container">
+      <p class="section-eyebrow">Legal &amp; Governance</p>
+      <h1>Privacy Policy.</h1>
+      <p class="page-lead">Last updated: October 2024</p>
     </section>
 
-    <section class="privacy-content">
-      <div class="container">
-        <div class="privacy-text">
+    <section class="privacy-content container">
+      <div class="privacy-text">
           <p>At BeepWeep, accessible at https://beepweep.com, one of our main priorities is the privacy of our visitors.
             This Privacy Policy document contains types of information that is collected and recorded by BeepWeep and
             how we use it.</p>
@@ -214,45 +240,67 @@
             to contact us immediately and we will do our best efforts to promptly remove such information from our
             records.</p>
         </div>
-      </div>
     </section>
   </main>
 
-  <footer class="site-footer" id="contact">
-    <div class="container footer-bottom-grid">
-      <p class="footer-legal">&copy; 2015 to <span id="current-year"></span> | <strong>BeepWeep Ventures.</strong> All
-        rights reserved.</p>
-      <nav class="footer-links-buttons">
-        <a href="privacy.html" class="footer-button" aria-label="Privacy Policy">
-          <span>PRIVACY POLICY</span>
-        </a>
-        <a class="footer-button footer-button-icon" href="https://www.linkedin.com/company/beepweep/" target="_blank"
-          rel="noopener" aria-label="BeepWeep Ventures on LinkedIn">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path
-              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-          </svg>
-        </a>
-        <a class="footer-button footer-button-icon" href="https://github.com/beepweep/beepweep.github.io"
-          target="_blank" rel="noopener" aria-label="BeepWeep Ventures on GitHub">
-          <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-            <path
-              d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.52 7.52 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
-          </svg>
-        </a>
-      </nav>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <span>BeepWeep</span>
+          </a>
+          <p>
+            A haven for the 10x builders, the thinkers, the quiet architects of wealth. Operating globally from Dubai and Gurgaon.
+          </p>
+        </div>
 
+        <nav class="footer-nav-col" aria-label="Product Fleet links">
+          <span class="footer-col-title">Our Fleet</span>
+          <a href="index.html#clusterbid">ClusterBid ↗</a>
+          <a href="index.html#neev">Neev ↗</a>
+          <a href="index.html#curat">Curat ↗</a>
+          <a href="index.html#vericite">VeriCite ↗</a>
+        </nav>
+
+        <nav class="footer-nav-col" aria-label="Company links">
+          <span class="footer-col-title">Organization</span>
+          <a href="index.html#platform">Operating Thesis</a>
+          <a href="index.html#philosophy">Philosophy</a>
+          <a href="index.html#journey">Journey</a>
+          <a href="index.html#team">Leadership</a>
+          <a href="https://wellfound.com/company/beepweep" target="_blank" rel="noopener">Careers ↗</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <nav class="footer-nav-col" aria-label="Connect links">
+          <span class="footer-col-title">Protocol</span>
+          <a href="mailto:hello@beepweep.com">Email ↗</a>
+          <a href="https://www.linkedin.com/company/beepweep/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/beepweep/beepweep.github.io" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://dash.beepweep.com" target="_blank" rel="noopener">Client Login ↗</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2015–<span id="current-year">2026</span> BeepWeep. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html" aria-current="page">Privacy Policy</a>
+          <button class="cookie-settings" type="button" hidden>Cookie Settings</button>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <div class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie usage notice">
-    <p>We use cookies to improve your experience and analyze site usage. By using our site, you agree to our <a
-        href="privacy.html">Privacy Policy</a>.</p>
-    <div class="cookie-banner__countdown" aria-hidden="true"><span>10</span>s</div>
-    <button class="cookie-banner__action" type="button">Okay</button>
-  </div>
-
-  <script src="assets/js/main.js"></script>
+  <aside class="cookie-banner" aria-label="Cookie preferences" hidden>
+    <p>
+      We use cookies to analyze site traffic and enhance platform experience. By clicking "Accept All", you agree to our <a href="privacy.html">Privacy Policy</a>.
+    </p>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-btn-secondary cookie-decline" type="button">Reject All</button>
+      <button class="cookie-btn cookie-btn-primary cookie-accept" type="button">Accept All</button>
+    </div>
+  </aside>
 </body>
 
 </html>
