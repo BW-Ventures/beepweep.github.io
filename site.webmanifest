@@ -1,0 +1,22 @@
+{
+  "name": "BeepWeep",
+  "short_name": "BeepWeep",
+  "description": "A family of purpose-built products across AI infrastructure, operations, digital assets, and institutional knowledge.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fafaf9",
+  "theme_color": "#0f0e0d",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

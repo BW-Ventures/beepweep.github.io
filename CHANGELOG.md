@@ -6,9 +6,16 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added
+- Redesigned 1200x630 Open Graph card (`assets/images/og-beepweep.png`) with editorial branding, canonical product roster, and architectural strip.
+- New "BW" monogram favicon system: `favicon.svg`, multi-resolution `favicon.ico`, `favicon-32x32.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, and `site.webmanifest`.
+- Complete Schema.org JSON-LD structured data on all pages (`Organization`, `WebSite`, `ItemList`, `ContactPage`, `WebPage`).
+- Outbound product link and CTA lead intent event tracking in Google Analytics 4.
+
 ### Changed
 - Update ClusterBid messaging to reflect its live production status and production cluster availability.
 - Apply a shared layered product visual to all four fleet panels, using an edge-to-edge background and subtle foreground reveal animation.
+- Refresh sitemap.xml with current lastmod timestamps and image metadata.
 
 ### Fixed
 - Compact single-line announcement on mobile and tablet.
