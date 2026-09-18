@@ -295,6 +295,25 @@
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${analyticsId}`;
       document.head.appendChild(script);
+
+      // Delegated conversion & outbound link tracking
+      document.addEventListener('click', (e) => {
+        if (typeof window.gtag !== 'function') return;
+        const anchor = e.target.closest('a');
+        if (!anchor) return;
+        const href = anchor.getAttribute('href') || '';
+        if (href.includes('contact.html')) {
+          window.gtag('event', 'lead_intent', {
+            event_category: 'engagement',
+            event_label: 'Book a Call CTA'
+          });
+        } else if (href.startsWith('http') && !href.includes(window.location.hostname)) {
+          window.gtag('event', 'outbound_product_click', {
+            event_category: 'outbound',
+            event_label: href
+          });
+        }
+      });
     };
 
     const recordChoice = (choice) => {
