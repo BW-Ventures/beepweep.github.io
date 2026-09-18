@@ -37,7 +37,17 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
-  <link rel="stylesheet" href="assets/css/styles-v10.css?v=14" />
+  <link rel="stylesheet" href="assets/css/styles-v10.css?v=16" />
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('beepweep-theme');
+        var prefDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
   <script src="assets/js/main-v10.js" defer></script>
 </head>
 
@@ -70,6 +80,18 @@
         </div>
         <div class="mobile-nav-panel">
           <a class="button button-primary mobile-nav-cta" href="contact.html">Book a Call</a>
+          <div class="mobile-theme-row">
+            <span class="mobile-theme-label">Appearance</span>
+            <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+              <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+              </svg>
+            </button>
+          </div>
           <div class="mobile-nav-logins">
             <span class="mobile-nav-section-title">Fleet &amp; Platform Access</span>
             <div class="mobile-nav-logins-list">
@@ -114,6 +136,15 @@
       </nav>
 
       <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+        </button>
         <div class="login-dropdown-wrapper">
           <button class="login-btn" type="button" aria-expanded="false" aria-controls="login-dropdown-menu" id="login-dropdown-btn">
             <span>Login</span>
@@ -283,28 +314,28 @@
 
       <div class="partners-grid" role="region" aria-label="Partner and client logos">
         <div class="partner-logo">
-          <img src="assets/images/partners/digitalocean.svg" alt="DigitalOcean" loading="lazy" width="170" height="48" />
+          <img src="assets/images/partners/digitalocean.svg" alt="DigitalOcean" loading="lazy" width="221" height="62" />
         </div>
         <div class="partner-logo">
-          <img src="assets/images/partners/damac.svg" alt="DAMAC Properties" loading="lazy" width="170" height="44" />
+          <img src="assets/images/partners/damac.svg" alt="DAMAC Properties" loading="lazy" width="221" height="57" />
         </div>
         <div class="partner-logo">
-          <img src="assets/images/partners/reliance.svg" alt="Reliance Industries" loading="lazy" width="170" height="50" />
+          <img src="assets/images/partners/reliance.svg" alt="Reliance Industries" loading="lazy" width="221" height="65" />
         </div>
         <div class="partner-logo">
-          <img src="assets/images/partners/pwc.svg" alt="PwC (PricewaterhouseCoopers)" loading="lazy" width="105" height="50" />
+          <img src="assets/images/partners/pwc.svg" alt="PwC (PricewaterhouseCoopers)" loading="lazy" width="136" height="65" />
         </div>
         <div class="partner-logo">
-          <img src="assets/images/partners/australian-government.svg" alt="Australian Government" loading="lazy" width="170" height="52" />
+          <img src="assets/images/partners/australian-government.svg" alt="Australian Government" loading="lazy" width="221" height="68" />
         </div>
         <div class="partner-logo">
-          <img src="assets/images/partners/vit.svg" alt="VIT (Vellore Institute of Technology)" loading="lazy" width="155" height="50" />
+          <img src="assets/images/partners/vit.svg" alt="VIT (Vellore Institute of Technology)" loading="lazy" width="202" height="65" />
         </div>
         <div class="partner-logo">
-          <img src="assets/images/partners/aws.svg" alt="Amazon Web Services" loading="lazy" width="115" height="50" />
+          <img src="assets/images/partners/aws.svg" alt="Amazon Web Services" loading="lazy" width="150" height="65" />
         </div>
         <div class="partner-logo">
-          <img src="assets/images/partners/zoho.svg" alt="Zoho Corporation" loading="lazy" width="135" height="46" />
+          <img src="assets/images/partners/zoho.svg" alt="Zoho Corporation" loading="lazy" width="176" height="60" />
         </div>
       </div>
     </section>
@@ -447,7 +478,7 @@
           <div class="product-visual product-visual--layered">
             <figure class="product-interface-figure product-visual-stack">
               <img class="product-visual-background" src="assets/images/product-clusterbid-background.webp" alt="" width="2560" height="1435" aria-hidden="true" />
-              <img class="product-visual-foreground" src="assets/images/product-curat-overlay.webp?v=2" alt="Layered product interface preview" width="2475" height="1464" />
+              <img class="product-visual-foreground" src="assets/images/product-clusterbid-overlay.webp" alt="ClusterBid homepage hero showing The Right Compute, Faster over forest gateway art" width="2475" height="1464" />
             </figure>
           </div>
         </section>
@@ -489,8 +520,8 @@
 
           <div class="product-visual product-visual--layered">
             <figure class="product-interface-figure product-visual-stack">
-              <img class="product-visual-background" src="assets/images/product-curat-background.webp?v=2" alt="" width="3600" height="3600" aria-hidden="true" />
-              <img class="product-visual-foreground" src="assets/images/product-curat-overlay.webp?v=2" alt="Layered product interface preview" width="2475" height="1464" />
+              <img class="product-visual-background" src="assets/images/product-neev-background.webp" alt="" width="2560" height="1435" aria-hidden="true" />
+              <img class="product-visual-foreground" src="assets/images/product-neev-overlay.webp" alt="Neev homepage hero showing Run your business like a Fortune 500 with revenue workspace cards" width="2475" height="1464" />
             </figure>
           </div>
         </section>
@@ -532,8 +563,8 @@
 
           <div class="product-visual product-visual--layered">
             <figure class="product-interface-figure product-visual-stack">
-              <img class="product-visual-background" src="assets/images/product-curat-background.webp?v=2" alt="" width="3600" height="3600" aria-hidden="true" />
-              <img class="product-visual-foreground" src="assets/images/product-curat-overlay.webp?v=2" alt="Layered product interface preview" width="2475" height="1464" />
+              <img class="product-visual-background" src="assets/images/product-curat-background.webp?v=3" alt="" width="2560" height="1435" aria-hidden="true" />
+              <img class="product-visual-foreground" src="assets/images/product-curat-overlay.webp?v=2" alt="Curat homepage hero showing Find the perfect card for you with card search" width="2475" height="1464" />
             </figure>
           </div>
         </section>
@@ -575,8 +606,8 @@
 
           <div class="product-visual product-visual--layered">
             <figure class="product-interface-figure product-visual-stack">
-              <img class="product-visual-background" src="assets/images/product-curat-background.webp?v=2" alt="" width="3600" height="3600" aria-hidden="true" />
-              <img class="product-visual-foreground" src="assets/images/product-curat-overlay.webp?v=2" alt="Layered product interface preview" width="2475" height="1464" />
+              <img class="product-visual-background" src="assets/images/product-vericite-background.webp" alt="" width="2560" height="1435" aria-hidden="true" />
+              <img class="product-visual-foreground" src="assets/images/product-vericite-overlay.webp" alt="VeriCite console sign-in with brand panel Answers your institution can trust" width="2475" height="1464" />
             </figure>
           </div>
         </section>
@@ -859,7 +890,7 @@
     <!-- Global Coordinates / Hubs -->
     <section class="coordinates-section container" id="coordinates" aria-labelledby="coordinates-title">
       <p class="section-eyebrow">Our Coordinates</p>
-      <h2 id="coordinates-title">Two Global Hubs. One Perspective.</h2>
+      <h2 id="coordinates-title">Four Global Hubs. One Perspective.</h2>
 
       <div class="coordinates-grid">
         <article class="coordinate-card">
@@ -881,6 +912,28 @@
           <div class="coordinate-details">
             <p>India</p>
             <p>Core Systems · Architecture · Build</p>
+          </div>
+        </article>
+
+        <article class="coordinate-card">
+          <div>
+            <h3>San Francisco</h3>
+            <p class="coordinate-role">Frontier Partnerships</p>
+          </div>
+          <div class="coordinate-details">
+            <p>United States</p>
+            <p>AI Research · Ecosystem</p>
+          </div>
+        </article>
+
+        <article class="coordinate-card">
+          <div>
+            <h3>Singapore</h3>
+            <p class="coordinate-role">Capital &amp; Markets</p>
+          </div>
+          <div class="coordinate-details">
+            <p>Singapore</p>
+            <p>Regional Funds · Partnerships</p>
           </div>
         </article>
       </div>
