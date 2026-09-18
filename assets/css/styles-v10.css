@@ -1437,6 +1437,52 @@ h3 {
   display: block;
 }
 
+/* Curat layered visual: second screen enters from the right */
+.product-visual--layered {
+  justify-content: flex-end;
+  padding: 0;
+  background: transparent;
+}
+
+.product-visual-stack {
+  position: relative;
+  min-height: clamp(430px, 42vw, 620px);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  --product-layer-inset: clamp(24px, 3vw, 48px);
+  --product-layer-overflow: 12px;
+  --product-layer-rest-offset: 30px;
+  isolation: isolate;
+}
+
+.product-visual-background {
+  position: relative;
+  z-index: 1;
+}
+
+.product-interface-figure .product-visual-foreground {
+  position: absolute;
+  z-index: 2;
+  top: var(--product-layer-inset);
+  bottom: var(--product-layer-inset);
+  left: calc(var(--product-layer-inset) + var(--product-layer-rest-offset));
+  width: calc(100% - var(--product-layer-inset) + var(--product-layer-overflow));
+  height: calc(100% - (2 * var(--product-layer-inset)));
+  object-fit: cover;
+  object-position: left center;
+  border: 0;
+  border-radius: 0;
+  clip-path: inset(2px 0 2px 2px round 10px 0 0 10px);
+  box-shadow: none;
+  transition: left 0.78s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: left;
+}
+
+.product-visual-stack:hover .product-visual-foreground {
+  left: var(--product-layer-inset);
+}
+
 /* Mockup Windows */
 .mockup-window {
   background-color: #ffffff;
@@ -2732,6 +2778,16 @@ html.enhanced .quote-nav {
   .product-visual {
     padding: 24px 16px;
   }
+  .product-visual--layered {
+    min-height: 360px;
+    padding: 0;
+  }
+  .product-visual-stack {
+    --product-layer-inset: 18px;
+    --product-layer-overflow: 8px;
+    --product-layer-rest-offset: 18px;
+    min-height: 320px;
+  }
   .hero-ctas {
     flex-direction: column;
     align-items: stretch;
@@ -2797,6 +2853,9 @@ html:not(.enhanced) .mobile-nav-panel {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .product-visual-stack:hover .product-visual-foreground {
+    left: calc(var(--product-layer-inset) + var(--product-layer-rest-offset));
+  }
   html {
     scroll-behavior: auto;
   }
