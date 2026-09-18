@@ -37,7 +37,17 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
-  <link rel="stylesheet" href="assets/css/styles-v10.css?v=14" />
+  <link rel="stylesheet" href="assets/css/styles-v10.css?v=16" />
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('beepweep-theme');
+        var prefDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
   <script src="assets/js/main-v10.js" defer></script>
 </head>
 
@@ -61,6 +71,18 @@
         </div>
         <div class="mobile-nav-panel">
           <a class="button button-primary mobile-nav-cta" href="contact.html" aria-current="page">Book a Call</a>
+          <div class="mobile-theme-row">
+            <span class="mobile-theme-label">Appearance</span>
+            <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+              <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+              </svg>
+            </button>
+          </div>
           <div class="mobile-nav-logins">
             <span class="mobile-nav-section-title">Fleet &amp; Platform Access</span>
             <div class="mobile-nav-logins-list">
@@ -105,6 +127,15 @@
       </nav>
 
       <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+        </button>
         <div class="login-dropdown-wrapper">
           <button class="login-btn" type="button" aria-expanded="false" aria-controls="login-dropdown-menu" id="login-dropdown-btn">
             <span>Login</span>
@@ -201,6 +232,34 @@
               <p>Systems Engineering</p>
             </div>
           </article>
+
+          <article class="coordinate-card">
+            <div>
+              <h3>San Francisco</h3>
+              <p class="coordinate-role">Frontier Partnerships</p>
+              <p style="font-size:0.875rem;color:var(--text-secondary);margin-top:8px;">
+                United States
+              </p>
+            </div>
+            <div class="coordinate-details">
+              <p>AI Research</p>
+              <p>Ecosystem Partnerships</p>
+            </div>
+          </article>
+
+          <article class="coordinate-card">
+            <div>
+              <h3>Singapore</h3>
+              <p class="coordinate-role">Capital &amp; Markets</p>
+              <p style="font-size:0.875rem;color:var(--text-secondary);margin-top:8px;">
+                Singapore
+              </p>
+            </div>
+            <div class="coordinate-details">
+              <p>Regional Funds</p>
+              <p>Strategic Partnerships</p>
+            </div>
+          </article>
         </div>
 
         <div style="margin-top:40px;padding:24px;background-color:var(--bg-secondary);border:1px solid var(--border-subtle);border-radius:var(--radius-md);">
@@ -275,7 +334,7 @@
             <span>BeepWeep</span>
           </a>
           <p>
-            A haven for the 10x builders, the thinkers, the quiet architects of wealth. Operating globally from Dubai and Gurgaon.
+            A haven for the 10x builders, the thinkers, the quiet architects of wealth. Operating globally from Dubai, Gurgaon, San Francisco, and Singapore.
           </p>
         </div>
 

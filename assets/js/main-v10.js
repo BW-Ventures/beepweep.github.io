@@ -28,6 +28,63 @@
     });
   }
 
+  // 2b. Theme Switcher (Dark / Light)
+  const themeToggles = document.querySelectorAll('.theme-toggle');
+  const getStoredTheme = () => {
+    try {
+      return localStorage.getItem('beepweep-theme');
+    } catch (e) {
+      return null;
+    }
+  };
+
+  const getEffectiveTheme = () => {
+    return document.documentElement.getAttribute('data-theme') ||
+      getStoredTheme() ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  };
+
+  const applyTheme = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem('beepweep-theme', theme);
+    } catch (e) {}
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeMeta) {
+      themeMeta.setAttribute('content', theme === 'dark' ? '#0f0e0d' : '#fafaf9');
+    }
+    themeToggles.forEach((btn) => {
+      btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+      btn.setAttribute('title', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+    });
+  };
+
+  themeToggles.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const current = getEffectiveTheme();
+      const next = current === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+    });
+  });
+
+  try {
+    const colorSchemeMq = window.matchMedia('(prefers-color-scheme: dark)');
+    const onSystemThemeChange = (e) => {
+      if (!getStoredTheme()) {
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    };
+    if (typeof colorSchemeMq.addEventListener === 'function') {
+      colorSchemeMq.addEventListener('change', onSystemThemeChange);
+    } else if (typeof colorSchemeMq.addListener === 'function') {
+      colorSchemeMq.addListener(onSystemThemeChange);
+    }
+  } catch (e) {}
+
+  // Set initial labels
+  applyTheme(getEffectiveTheme());
+
   // 3. Mobile Navigation Toggle & Accessible Focus
   const menuBtn = document.querySelector('.menu-toggle');
   const nav = document.getElementById('site-nav');

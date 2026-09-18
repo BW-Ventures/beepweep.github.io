@@ -7,6 +7,10 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Added
+- Complete Dark Theme across the entire site (`data-theme="dark"`) with automatic system preference detection and localStorage persistence.
+- Theme Switcher button right at the top header actions (desktop and mobile) and inside the mobile navigation drawer.
+- Razor-sharp white monochrome partner logos in dark theme (`brightness(0) invert(1)`) eliminating muddy contrast against dark obsidian surfaces.
+- Dedicated silk artwork backgrounds and live interface overlays across all four fleet panels (ClusterBid, Neev, Curat, VeriCite).
 - Redesigned 1200x630 Open Graph card (`assets/images/og-beepweep.png`) with editorial branding, canonical product roster, and architectural strip.
 - New "BW" monogram favicon system: `favicon.svg`, multi-resolution `favicon.ico`, `favicon-32x32.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, and `site.webmanifest`.
 - Complete Schema.org JSON-LD structured data on all pages (`Organization`, `WebSite`, `ItemList`, `ContactPage`, `WebPage`).
