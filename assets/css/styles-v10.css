@@ -1147,10 +1147,10 @@ h3 {
 .partners-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 32px 48px;
+  gap: 36px 48px;
   align-items: center;
   justify-items: center;
-  max-width: 1200px;
+  max-width: 1280px;
   margin-inline: auto;
 }
 
@@ -1164,7 +1164,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 98px;
+  height: 116px;
   width: 100%;
   padding: 8px 16px;
   position: relative;
@@ -1172,8 +1172,8 @@ h3 {
 }
 
 .partner-logo img {
-  max-width: 221px;
-  max-height: 68px;
+  max-width: 285px;
+  max-height: 88px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -2661,6 +2661,7 @@ html.enhanced .quote-nav {
   }
   .partners-grid {
     grid-template-columns: repeat(4, 1fr);
+    gap: 24px 32px;
   }
   .stats-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -2679,6 +2680,18 @@ html.enhanced .quote-nav {
 }
 
 @media (max-width: 900px) {
+  .partners-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px 16px;
+  }
+  .partner-logo {
+    padding: 4px 6px;
+    height: 76px;
+  }
+  .partner-logo img {
+    max-width: 100%;
+    max-height: 54px;
+  }
   .announcement-banner {
     min-height: 36px;
     padding: 6px 38px 6px 12px;
