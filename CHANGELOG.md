@@ -8,6 +8,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 - Update ClusterBid messaging to reflect its live production status and production cluster availability.
+- Apply a shared layered product visual to all four fleet panels, using an edge-to-edge background and subtle foreground reveal animation.
 
 ### Fixed
 - Compact single-line announcement on mobile and tablet.
