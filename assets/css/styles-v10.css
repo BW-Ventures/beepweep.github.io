@@ -99,32 +99,6 @@
   color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg-primary: #0f0e0d;
-    --bg-secondary: #161513;
-    --bg-tertiary: #1f1d1b;
-    --bg-card: #161513;
-    --bg-card-hover: #1f1d1b;
-
-    --text-primary: #fafaf9;
-    --text-secondary: #adaba5;
-    --text-tertiary: #706d66;
-    --text-inverse: #0f0e0d;
-
-    --border-subtle: #292724;
-    --border-primary: #383531;
-    --border-strong: #524f49;
-    --border-dark: #292724;
-
-    --accent-ink: #fafaf9;
-    --accent-hover: #eae8e5;
-    --header-bg: rgba(15, 14, 13, 0.88);
-
-    color-scheme: dark;
-  }
-}
-
 [data-theme="gray"] {
   --bg-primary: #f2f1f0;
   --bg-secondary: #fafaf9;
@@ -145,17 +119,6 @@
   --bg-card: #191816;
   --border-subtle: #292724;
   --border-primary: #383531;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) [data-theme="gray"],
-  :root:not([data-theme="light"]) .quote-section {
-    --bg-primary: #121110;
-    --bg-secondary: #191816;
-    --bg-card: #191816;
-    --border-subtle: #292724;
-    --border-primary: #383531;
-  }
 }
 
 /* --- Base & Reset --- */
@@ -713,15 +676,6 @@ h3 {
   display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-toggle .icon-sun {
-    display: block;
-  }
-  :root:not([data-theme="light"]) .theme-toggle .icon-moon {
-    display: none;
-  }
-}
-
 /* Mobile Theme Row */
 .mobile-theme-row {
   display: flex;
@@ -1215,24 +1169,6 @@ h3 {
 [data-theme="dark"] .footer-brand img,
 :root[data-theme="dark"] .footer-brand img {
   filter: brightness(0) invert(1);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .partner-logo img {
-    filter: brightness(0) invert(1);
-    opacity: 0.72;
-  }
-  :root:not([data-theme="light"]) .partner-logo:hover img {
-    filter: brightness(0) invert(1);
-    opacity: 1;
-  }
-  :root:not([data-theme="light"]) .partner-logo.is-animating img {
-    filter: brightness(0) invert(1);
-    opacity: 0.95;
-  }
-  :root:not([data-theme="light"]) .footer-brand img {
-    filter: brightness(0) invert(1);
-  }
 }
 
 /* --- Two Disciplines / Platform Router Section --- */
