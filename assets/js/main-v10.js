@@ -41,7 +41,7 @@
   const getEffectiveTheme = () => {
     return document.documentElement.getAttribute('data-theme') ||
       getStoredTheme() ||
-      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      'light';
   };
 
   const applyTheme = (theme) => {
@@ -67,20 +67,6 @@
       applyTheme(next);
     });
   });
-
-  try {
-    const colorSchemeMq = window.matchMedia('(prefers-color-scheme: dark)');
-    const onSystemThemeChange = (e) => {
-      if (!getStoredTheme()) {
-        applyTheme(e.matches ? 'dark' : 'light');
-      }
-    };
-    if (typeof colorSchemeMq.addEventListener === 'function') {
-      colorSchemeMq.addEventListener('change', onSystemThemeChange);
-    } else if (typeof colorSchemeMq.addListener === 'function') {
-      colorSchemeMq.addListener(onSystemThemeChange);
-    }
-  } catch (e) {}
 
   // Set initial labels
   applyTheme(getEffectiveTheme());
