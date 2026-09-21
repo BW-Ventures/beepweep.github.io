@@ -13,7 +13,7 @@ Canonical order used everywhere (hero cards, tabs, login dropdown, footer):
 1. **ClusterBid** — AI and GPU infrastructure. Region-pinned inference cloud. [clusterbid.com](https://clusterbid.com)
 2. **Neev** — MSME supply-chain operations. WhatsApp orders, ledgers, GST. [app.onneev.com](https://app.onneev.com)
 3. **Curat** — Loyalty layer for crypto cards, plus card discovery. [curat.money](https://curat.money)
-4. **VeriCite** — Institutional knowledge retrieval (multi-tenant RAG). [console.vericite.ai](https://console.vericite.ai)
+4. **VeriCite** — Institutional knowledge retrieval (multi-tenant RAG). [vericite.ai](https://vericite.ai)
 
 ## Design
 
