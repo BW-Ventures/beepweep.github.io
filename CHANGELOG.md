@@ -23,6 +23,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Refresh sitemap.xml with current lastmod timestamps and image metadata.
 
 ### Fixed
+- Calibrate optical logo sizing across all 8 partner logos so wide marks (DAMAC, Australia) and chunky marks (AWS, Zoho, PwC, Reliance, VIT, DigitalOcean) share uniform visual stature.
+- Remove scale transforms and ambient wave loops on partner logos for completely stable, zero-shift hover behavior.
 - Compact single-line announcement on mobile and tablet.
 - Consolidate mobile actions in the hamburger menu, correct drawer height and touch scrolling, tighten link spacing, and restore CTA contrast.
 
