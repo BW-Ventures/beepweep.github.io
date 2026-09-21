@@ -458,7 +458,7 @@
   // tabs system above; the spy must highlight Fleet for them but never
   // overwrite them, or deep-links/refresh would reset to the first tab.
   (function initScrollSpy() {
-    const NAV_SECTION_IDS = ['platform', 'fleet', 'philosophy', 'journey', 'team', 'coordinates'];
+    const NAV_SECTION_IDS = ['fleet', 'platform', 'philosophy', 'journey', 'team', 'coordinates'];
     const PRODUCT_IDS = ['clusterbid', 'neev', 'curat', 'vericite'];
     const navLinks = Array.from(document.querySelectorAll('.site-nav a[href^="#"]'));
     const sections = NAV_SECTION_IDS.map(id => document.getElementById(id)).filter(Boolean);
