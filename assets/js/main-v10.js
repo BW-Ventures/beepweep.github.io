@@ -400,27 +400,6 @@
   }
 
   // 5b. Harvey Partner Logos Ambient Wave Animation
-  const partnersGrid = document.querySelector('.partners-grid');
-  if (partnersGrid && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const cells = Array.from(partnersGrid.querySelectorAll('.partner-logo'));
-    if (cells.length > 0) {
-      let isHovered = false;
-      partnersGrid.addEventListener('mouseenter', () => { isHovered = true; });
-      partnersGrid.addEventListener('mouseleave', () => { isHovered = false; });
-
-      setInterval(() => {
-        if (isHovered) return;
-        cells.forEach((cell, i) => {
-          setTimeout(() => {
-            if (isHovered) return;
-            cell.classList.add('is-animating');
-            setTimeout(() => cell.classList.remove('is-animating'), 900);
-          }, i * 160);
-        });
-      }, 5500);
-    }
-  }
-
   // 6. Executive Philosophy Quote Switcher
   const quoteSection = document.getElementById('philosophy');
   if (quoteSection) {

@@ -1101,53 +1101,79 @@ h3 {
 .partners-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 36px 48px;
+  gap: 40px 48px;
   align-items: center;
   justify-items: center;
-  max-width: 1280px;
+  max-width: 1200px;
   margin-inline: auto;
-}
-
-@media (min-width: 1024px) {
-  .partners-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 .partner-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 116px;
+  height: 84px;
   width: 100%;
-  padding: 8px 16px;
-  position: relative;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  padding: 0 12px;
 }
 
 .partner-logo img {
-  max-width: 285px;
-  max-height: 88px;
+  display: block;
   width: auto;
-  height: auto;
   object-fit: contain;
   filter: grayscale(100%);
-  opacity: 0.7;
-  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+  opacity: 0.65;
+  transition: opacity var(--transition-fast), filter var(--transition-fast);
 }
 
 .partner-logo:hover img {
   opacity: 1;
   filter: grayscale(0%);
-  transform: scale(1.02);
 }
 
-/* Staggered Wave Ambient Animation */
-.partner-logo.is-animating img {
-  opacity: 0.95;
-  filter: grayscale(20%);
+/* Optical sizing per logo */
+.partner-logo--digitalocean img {
+  height: 56px;
+  max-width: 140px;
 }
 
+.partner-logo--damac img {
+  height: 26px;
+  max-width: 195px;
+  width: 195px;
+}
+
+.partner-logo--reliance img {
+  height: 58px;
+  max-width: 145px;
+}
+
+.partner-logo--pwc img {
+  height: 54px;
+  max-width: 120px;
+}
+
+.partner-logo--australia img {
+  height: 48px;
+  max-width: 200px;
+}
+
+.partner-logo--vit img {
+  height: 60px;
+  max-width: 100px;
+}
+
+.partner-logo--aws img {
+  height: 44px;
+  max-width: 120px;
+}
+
+.partner-logo--zoho img {
+  height: 46px;
+  max-width: 150px;
+}
+
+/* Dark Theme Monochrome Logos */
 [data-theme="dark"] .partner-logo img,
 :root[data-theme="dark"] .partner-logo img {
   filter: brightness(0) invert(1);
@@ -1158,12 +1184,6 @@ h3 {
 :root[data-theme="dark"] .partner-logo:hover img {
   filter: brightness(0) invert(1);
   opacity: 1;
-}
-
-[data-theme="dark"] .partner-logo.is-animating img,
-:root[data-theme="dark"] .partner-logo.is-animating img {
-  filter: brightness(0) invert(1);
-  opacity: 0.95;
 }
 
 [data-theme="dark"] .footer-brand img,
@@ -2618,16 +2638,20 @@ html.enhanced .quote-nav {
 @media (max-width: 900px) {
   .partners-grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px 16px;
+    gap: 24px 16px;
   }
   .partner-logo {
-    padding: 4px 6px;
-    height: 76px;
+    height: 72px;
+    padding: 0 6px;
   }
-  .partner-logo img {
-    max-width: 100%;
-    max-height: 54px;
-  }
+  .partner-logo--digitalocean img { height: 48px; }
+  .partner-logo--damac img { height: 22px; max-width: 160px; width: 160px; }
+  .partner-logo--reliance img { height: 50px; }
+  .partner-logo--pwc img { height: 46px; }
+  .partner-logo--australia img { height: 40px; max-width: 160px; }
+  .partner-logo--vit img { height: 52px; }
+  .partner-logo--aws img { height: 38px; }
+  .partner-logo--zoho img { height: 40px; }
   .announcement-banner {
     min-height: 36px;
     padding: 6px 38px 6px 12px;
@@ -2879,11 +2903,20 @@ html.enhanced .quote-nav {
   }
   .partners-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 28px 24px;
   }
   .partner-logo {
-    padding: 4px;
+    height: 68px;
+    padding: 0 8px;
   }
+  .partner-logo--digitalocean img { height: 44px; }
+  .partner-logo--damac img { height: 20px; max-width: 145px; width: 145px; }
+  .partner-logo--reliance img { height: 46px; }
+  .partner-logo--pwc img { height: 42px; }
+  .partner-logo--australia img { height: 36px; max-width: 145px; }
+  .partner-logo--vit img { height: 48px; }
+  .partner-logo--aws img { height: 34px; }
+  .partner-logo--zoho img { height: 36px; }
   .stats-grid {
     grid-template-columns: 1fr;
   }
