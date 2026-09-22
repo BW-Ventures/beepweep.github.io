@@ -502,19 +502,19 @@
     function recalc() {
       ticking = false;
       if (navScrollLock) return; // nav-click scroll in flight: don't override
-      // A selected product tab owns the URL hash: keep it, but highlight Fleet.
-      if (isProductHash()) {
-        const productId = window.location.hash.replace('#', '');
-        if (currentId !== productId) {
-          currentId = productId;
-          highlightNav('fleet');
-        }
-        return;
-      }
       const TRIGGER = window.innerHeight * 0.4;
       let active = null;
       for (const s of sections) {
         if (s.getBoundingClientRect().top <= TRIGGER) active = s.id;
+      }
+      // A selected product tab owns the URL hash only while the fleet
+      // section (or the hero above it) is in view. Once the user scrolls
+      // past fleet, the visible section takes over the hash so nav
+      // highlighting and refresh position keep working.
+      if (isProductHash() && (active === 'fleet' || active === null)) {
+        currentId = window.location.hash.replace('#', '');
+        highlightNav(active === 'fleet' ? 'fleet' : null);
+        return;
       }
       setHash(active);
     }
