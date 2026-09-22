@@ -345,7 +345,7 @@
         const anchor = e.target.closest('a');
         if (!anchor) return;
         const href = anchor.getAttribute('href') || '';
-        if (href.includes('contact.html')) {
+        if (href.includes('cal.com') || href.includes('contact.html')) {
           window.gtag('event', 'lead_intent', {
             event_category: 'engagement',
             event_label: 'Book a Call CTA'

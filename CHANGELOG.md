@@ -7,6 +7,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Changed
+- Connect all "Book a Call" buttons site-wide and contact briefing card to https://cal.com/madhursatija/30min.
 - Scale partner logo sizing by +30% across desktop, tablet, and mobile with broadened grid layout for enhanced legibility.
 - Complete Dark Theme across the entire site (`data-theme="dark"`) with automatic system preference detection and localStorage persistence.
 - Theme Switcher button right at the top header actions (desktop and mobile) and inside the mobile navigation drawer.
