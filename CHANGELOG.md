@@ -6,6 +6,9 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added
+- Install official Google tag (`G-171E0C1V7V`) in `<head>` across all pages (index, contact, privacy, media) with real-time visitor and pageview measurement.
+
 ### Changed
 - Connect all "Book a Call" buttons site-wide and contact briefing card to https://cal.com/madhursatija/30min.
 - Scale partner logo sizing by +30% across desktop, tablet, and mobile with broadened grid layout for enhanced legibility.

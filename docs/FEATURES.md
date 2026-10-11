@@ -252,7 +252,7 @@ This document provides detailed information about all features implemented in th
 - Social media links (sameAs)
 
 ### Google Analytics
-- Tracking ID: G-MBHSMCVXKS
+- Tracking ID: G-171E0C1V7V
 - Standard gtag.js implementation
 - Privacy-compliant cookie usage
 

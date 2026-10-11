@@ -289,7 +289,7 @@
   const cookieSettingsBtn = document.querySelector('.cookie-settings');
   if (cookieBanner) {
     const consentStorageKey = 'beepweep-analytics-consent';
-    const analyticsId = 'G-MBHSMCVXKS';
+    const analyticsId = 'G-171E0C1V7V';
     let analyticsLoaded = false;
     let settingsOpened = false;
 
@@ -324,40 +324,44 @@
         return;
       }
 
-      if (analyticsLoaded) return;
-      analyticsLoaded = true;
-
       window.dataLayer = window.dataLayer || [];
-      window.gtag = function () {
-        window.dataLayer.push(arguments);
-      };
-      window.gtag('js', new Date());
-      window.gtag('config', analyticsId);
+      if (typeof window.gtag !== 'function') {
+        window.gtag = function () {
+          window.dataLayer.push(arguments);
+        };
+        window.gtag('js', new Date());
+        window.gtag('config', analyticsId);
+      }
 
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${analyticsId}`;
-      document.head.appendChild(script);
-
-      // Delegated conversion & outbound link tracking
-      document.addEventListener('click', (e) => {
-        if (typeof window.gtag !== 'function') return;
-        const anchor = e.target.closest('a');
-        if (!anchor) return;
-        const href = anchor.getAttribute('href') || '';
-        if (href.includes('cal.com') || href.includes('contact.html')) {
-          window.gtag('event', 'lead_intent', {
-            event_category: 'engagement',
-            event_label: 'Book a Call CTA'
-          });
-        } else if (href.startsWith('http') && !href.includes(window.location.hostname)) {
-          window.gtag('event', 'outbound_product_click', {
-            event_category: 'outbound',
-            event_label: href
-          });
-        }
-      });
+      if (!analyticsLoaded && !document.querySelector(`script[src*="${analyticsId}"]`)) {
+        analyticsLoaded = true;
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${analyticsId}`;
+        document.head.appendChild(script);
+      } else {
+        analyticsLoaded = true;
+      }
     };
+
+    // Delegated conversion & outbound link tracking
+    document.addEventListener('click', (e) => {
+      if (typeof window.gtag !== 'function') return;
+      const anchor = e.target.closest('a');
+      if (!anchor) return;
+      const href = anchor.getAttribute('href') || '';
+      if (href.includes('cal.com') || href.includes('contact.html')) {
+        window.gtag('event', 'lead_intent', {
+          event_category: 'engagement',
+          event_label: 'Book a Call CTA'
+        });
+      } else if (href.startsWith('http') && !href.includes(window.location.hostname)) {
+        window.gtag('event', 'outbound_product_click', {
+          event_category: 'outbound',
+          event_label: href
+        });
+      }
+    });
 
     const recordChoice = (choice) => {
       try {
